@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Âmbar | Pole Dance</title>
+
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ambar: {
+                            darkest: '#420202',
+                            darkred: '#741000',
+                            red: '#952121',
+                            orange: '#e98e29',
+                            lightorange: '#e49e44',
+                            yellow: '#fada64',
+                            cream: '#fdf3e3',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'cta-pulse': 'cta-pulse 2s infinite',
+                    },
+                    keyframes: {
+                        'cta-pulse': {
+                            '0%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(233, 142, 41, 0.7)' },
+                            '70%': { transform: 'scale(1.05)', boxShadow: '0 0 0 15px rgba(233, 142, 41, 0)' },
+                            '100%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(233, 142, 41, 0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ajustes finos para imagens de fundo e SVG */
+        .bg-hero-pattern {
+            /* Fundo principal da Hero Section - Ajuste o caminho se necessário */
+            background: url('img/fundo_degrade.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Oculta scrollbar no carrossel, mas permite scroll funcional */
+        .hide-scroll-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scroll-bar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-ambar-cream text-ambar-darkest antialiased">
+
+    <section
+        class="relative w-full bg-hero-pattern min-h-[90vh] flex flex-col justify-center items-center text-center px-6 pt-20 pb-40">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <img src="img/Logo_A_off.png" alt="Logo Portal Âmbar" class="h-24 w-auto mx-auto mb-8 object-contain">
+
+            <h1 class="font-serif text-4xl md:text-6xl text-ambar-cream font-bold leading-tight mb-6">
+                Confiança de <span class="text-ambar-yellow italic">dentro para fora.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-ambar-cream/90 font-light max-w-2xl mx-auto mb-10">
+                No <span class="text-ambar-yellow italic font-serif font-bold">PORTAL ÂMBAR</span>, você não aprende
+                apenas técnicas. Você
+                acessa um caminho. Um caminho para um corpo mais forte, mais flexível, mais artístico, mais criativo,
+                mais potente. Um caminho de volta para si, onde passamos pela sutileza da sensualidade, a precisão da
+                técnica e o poder da arte.
+            </p>
+
+            <a href="#checkout-kiwify"
+                class="inline-block bg-ambar-orange text-ambar-darkest font-bold text-lg md:text-xl px-10 py-5 rounded-full animate-cta-pulse transition-all hover:bg-ambar-yellow">
+                Quero começar
+            </a>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="relative block w-full h-[60px] md:h-[100px]" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                    class="fill-ambar-cream"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="relative w-full pt-20 pb-40">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16 relative z-10">
+            <div class="md:w-1/2 relative">
+                <div class="w-full aspect-square bg-ambar-lightorange rounded-full overflow-hidden relative shadow-2xl">
+                    <img src="img/IMG_1432.JPEG" alt="Movimento fluido de pole dance"
+                        class="w-full h-full object-cover">
+                </div>
+                <div
+                    class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-gradient-to-tr from-ambar-orange to-ambar-yellow blur-xl opacity-60 pointer-events-none">
+                </div>
+            </div>
+
+            <div class="md:w-1/2">
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-ambar-darkred mb-6">Acreditamos no corpo como
+                    casa. Na dança como expressão.</h2>
+                <p class="text-lg mb-6 leading-relaxed">
+                    O <strong>Portal Âmbar</strong> foi criado para quem deseja ampliar seus treinos e estudos para além
+                    das aulas do studio. É para quem deseja treinar em casa, com liberdade e autonomia mas sem abrir mão
+                    de qualidade, técnica e suporte. Aqui, temos uma metodologia própria desenvolvida pela Mariana
+                    Souza, uma das professoras do portal e, através dessa metodologia, nós mostramos o caminho de forma
+                    progressiva e segura com módulos do básico ao avançado que se complementam entre si.
+                <p class="text-lg mb-8 leading-relaxed">
+                    Aqui, você aprende no seu ritmo, a qualquer hora, com aulas completas de fortalecimento,
+                    flexibilidade, coreografias, exercícios específicos e muito mais. Todos os módulos foram pensados
+                    para que você amplie seu repertório, tanto ao preparar seu corpo para a prática quanto seu
+                    repertorio artístico e coreográfico para incluir nas suas performances.
+                </p>
+                <ul class="space-y-4 font-semibold text-ambar-red">
+                    <li class="flex items-center gap-3">
+                        <svg class="w-6 h-6 text-ambar-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Do básico ao avançado no seu ritmo
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-6 h-6 text-ambar-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Aulas novas todo mês
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-6 h-6 text-ambar-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Aulas bônus com convidados especiais
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-6 h-6 text-ambar-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Consultoria coregoráficas com as professoras
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="relative block w-full h-[60px] md:h-[100px] transform scale-x-[-1]"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                    class="fill-ambar-yellow opacity-20"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="relative w-full pt-20 pb-40 bg-ambar-yellow/20">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h1 class="font-serif text-4xl font-bold text-ambar-darkest mb-4">Aqui a evolução não tem pressa</h1>
+                <p class="text-lg text-ambar-darkred">Tudo que você vai conquistar com o Portal Âmbar</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div
+                    class="bg-white p-10 rounded-[40px] shadow-xl text-center border-b-4 border-ambar-red hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 bg-ambar-cream rounded-full flex items-center justify-center text-ambar-red">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                            <g fill="none">
+                                <path
+                                    d="M21.37 36c1.45-5.25 6.52-9 12.36-8.38c5.56.59 9.98 5.28 10.26 10.86c.07 1.47-.13 2.88-.56 4.19c-.26.8-1.04 1.33-1.89 1.33H11.758c-5.048 0-8.834-4.619-7.844-9.569L10 4h12l4 7l-8.57 6.13L15 14" />
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-miterlimit="2" stroke-width="4"
+                                    d="M21.37 36c1.45-5.25 6.52-9 12.36-8.38c5.56.59 9.98 5.28 10.26 10.86c.07 1.47-.13 2.88-.56 4.19c-.26.8-1.04 1.33-1.89 1.33H11.758c-5.048 0-8.834-4.619-7.844-9.569L10 4h12l4 7l-8.57 6.13L15 14m2.44 3.13L22 34" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-4">Força</h3>
+                    <p class="text-gray-600">Com sequencias de fortalecimento com e sem barra para preparar seu corpo de
+                        forma segura e evitar lesões</p>
+                </div>
+
+                <div
+                    class="bg-white p-10 rounded-[40px] shadow-xl text-center border-b-4 border-ambar-red hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 bg-ambar-cream rounded-full flex items-center justify-center text-ambar-red">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M16 5.5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m14.36 15l.944-.546c1.075-.622 1.612-.933 1.684-1.376a1 1 0 0 0 .01-.209c-.036-.446-.546-.79-1.565-1.478l-4.707-3.177C8.877 6.966 8.452 4.69 9.75 3" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M10.726 8.214C8.226 10.714 7 17.632 7 21m3.726-12.786C8.877 6.966 8.452 4.69 9.75 3m.975 5.214L13.372 10m.988 5l.944-.546c1.075-.622 1.612-.933 1.684-1.376a1 1 0 0 0 .01-.209c-.036-.446-.546-.79-1.565-1.478L13.373 10M15 21c-.973-1.135-1.974-2.7-2.95-4.142c-.683-1.01-1.025-1.516-1.065-2.045M13.373 10a15.6 15.6 0 0 0-1.77 2.894c-.44.927-.659 1.39-.618 1.92m0 0L8 14" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-4">Flexibilidade</h3>
+                    <p class="text-gray-600">Com aulas completas de alongamentos para melhorar sua mobilidade e
+                        flexibilidade de coluna, nos espacates frontal e middle, além de preparo espeficicos para pontes
+                        e needle</p>
+                </div>
+
+                <div
+                    class="bg-white p-10 rounded-[40px] shadow-xl text-center border-b-4 border-ambar-darkred hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 bg-ambar-cream rounded-full flex items-center justify-center text-ambar-darkred">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12 1v1l-.77-.64L7.76 5.5l3.24 2V5.16L10.78 5L12 3.56V23h2v-9.76l1.93-1.93c2.57.4 5.2-.95 6.73-2.48l-1.42-1.42C20.1 8.56 17.7 9.61 16 9.26l-2-2.02V1m3 3a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-6 3.76l-3.9 3.9c-1.85 1.84-2.79 3.19-4.04 6.5l1.88.7c1-2.66 1.72-3.72 2.93-5.02l1.35 1.35l-4.95 4.95l1.42 1.42L11 16.24Z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-4">Coreografias</h3>
+                    <p class="text-gray-600">Coreografias completas com e sem salto para ampliar seu repertorio
+                        artístico</p>
+                </div>
+
+                <div
+                    class="bg-white p-10 rounded-[40px] shadow-xl text-center border-b-4 border-ambar-red hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 bg-ambar-cream rounded-full flex items-center justify-center text-ambar-red">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 256 256">
+                            <path fill="currentColor"
+                                d="M246 144a6 6 0 0 1-12 0a98.11 98.11 0 0 0-98-98a90.1 90.1 0 0 0-90 90a82.1 82.1 0 0 0 82 82a74.09 74.09 0 0 0 74-74a66.08 66.08 0 0 0-66-66a58.07 58.07 0 0 0-58 58a50.06 50.06 0 0 0 50 50a42 42 0 0 0 42-42a34 34 0 0 0-34-34a26 26 0 0 0-26 26a18 18 0 0 0 18 18a10 10 0 0 0 10-10a2 2 0 0 0-2-2a6 6 0 0 1 0-12a14 14 0 0 1 14 14a22 22 0 0 1-22 22a30 30 0 0 1-30-30a38 38 0 0 1 38-38a46.06 46.06 0 0 1 46 46a54.06 54.06 0 0 1-54 54a62.07 62.07 0 0 1-62-62a70.08 70.08 0 0 1 70-70a78.09 78.09 0 0 1 78 78a86.1 86.1 0 0 1-86 86a94.11 94.11 0 0 1-94-94A102.12 102.12 0 0 1 136 34a110.13 110.13 0 0 1 110 110" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-4">Sequências e transições</h3>
+                    <p class="text-gray-600">Sequências de combos na barra de plano baixo, médio e alto, exercícios
+                        coreografados, tricks e transições com e sem salto, aulas de parada de mao e de floorwork</p>
+                </div>
+
+                <div
+                    class="bg-white p-10 rounded-[40px] shadow-xl text-center border-b-4 border-ambar-red hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 bg-ambar-cream rounded-full flex items-center justify-center text-ambar-red">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-4">Comunidade</h3>
+                    <p class="text-gray-600">Fazer parte de uma comunidade acolhedora que evolui junto, respeita seu
+                        tempo e celebra cada passo da sua jornada</p>
+                </div>
+
+                <div
+                    class="bg-white p-10 rounded-[40px] shadow-xl text-center border-b-4 border-ambar-darkred hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 bg-ambar-cream rounded-full flex items-center justify-center text-ambar-darkred">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-4">Autoestima</h3>
+                    <p class="text-gray-600">Sentir orgulho do seu corpo e do que ele é capaz de fazer ao mesmo tempo
+                        que se reconecta com a sua sensualidade sem pressão ou julgamento</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="relative block w-full h-[60px] md:h-[100px]" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                    class="fill-ambar-cream"></path>
+            </svg>
+        </div>
+    </section>
+    <section class="relative w-full pt-20 pb-40 bg-ambar-cream overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end relative z-10">
+            <div>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-4">Um Portal. <span
+                        class="text-ambar-orange">Várias Modalidades.</span></h2>
+                <p class="text-lg text-ambar-red">Descubra o que te movimenta.</p>
+            </div>
+
+            <div class="hidden md:flex gap-4">
+                <button id="btn-prev"
+                    class="w-12 h-12 rounded-full border-2 border-ambar-orange flex items-center justify-center text-ambar-orange hover:bg-ambar-orange hover:text-white transition-colors"
+                    aria-label="Anterior">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+                <button id="btn-next"
+                    class="w-12 h-12 rounded-full bg-ambar-orange text-white flex items-center justify-center hover:bg-ambar-lightorange transition-colors"
+                    aria-label="Próximo">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="w-full pb-10 relative z-10">
+            <div id="carousel-track" class="flex overflow-x-auto snap-x snap-mandatory gap-6 px-6 pb-8 hide-scroll-bar">
+
+                <div
+                    class="snap-start shrink-0 w-[280px] md:w-[320px] h-[400px] rounded-[30px] overflow-hidden relative group cursor-pointer shadow-lg">
+                    <img src="img/fundo01_vertical.png" alt="Aquecimentos"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 flex justify-between items-end">
+                        <h3 class="text-white font-bold text-xl leading-tight w-3/4">Aquecimentos Gerais e Específicos
+                        </h3>
+                    </div>
+                </div>
+
+                <div
+                    class="snap-start shrink-0 w-[280px] md:w-[320px] h-[400px] rounded-[30px] overflow-hidden relative group cursor-pointer shadow-lg">
+                    <img src="img/fundo02_vertical.png" alt="Fortalecimentos"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 flex justify-between items-end">
+                        <h3 class="text-white font-bold text-xl leading-tight w-3/4">Fortalecimentos com e sem barra
+                        </h3>
+                    </div>
+                </div>
+
+                <div
+                    class="snap-start shrink-0 w-[280px] md:w-[320px] h-[400px] rounded-[30px] overflow-hidden relative group cursor-pointer shadow-lg">
+                    <img src="img/fundo04_vertical.png" alt="Flexibilidade"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 flex justify-between items-end">
+                        <h3 class="text-white font-bold text-xl leading-tight w-3/4">Flexibilidade</h3>
+                    </div>
+                </div>
+
+                <div
+                    class="snap-start shrink-0 w-[280px] md:w-[320px] h-[400px] rounded-[30px] overflow-hidden relative group cursor-pointer shadow-lg">
+                    <img src="img/fundo01_vertical.png" alt="Sequências"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 flex justify-between items-end">
+                        <h3 class="text-white font-bold text-xl leading-tight w-3/4">Sequências de Pole Dance e Exotic
+                        </h3>
+                    </div>
+                </div>
+
+                <div
+                    class="snap-start shrink-0 w-[280px] md:w-[320px] h-[400px] rounded-[30px] overflow-hidden relative group cursor-pointer shadow-lg">
+                    <img src="img/fundo02_vertical.png" alt="Exercícios coreografados"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 flex justify-between items-end">
+                        <h3 class="text-white font-bold text-xl leading-tight w-3/4">Exercícios Coreografados</h3>
+                    </div>
+                </div>
+
+                <div
+                    class="snap-start shrink-0 w-[280px] md:w-[320px] h-[400px] rounded-[30px] overflow-hidden relative group cursor-pointer shadow-lg">
+                    <img src="img/fundo04_vertical.png" alt="Tricks e transições"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 flex justify-between items-end">
+                        <h3 class="text-white font-bold text-xl leading-tight w-3/4">Tricks e Transições com e sem barra
+                        </h3>
+                    </div>
+                </div>
+
+                <div
+                    class="snap-start shrink-0 w-[280px] md:w-[320px] h-[400px] rounded-[30px] overflow-hidden relative group cursor-pointer shadow-lg">
+                    <img src="img/fundo01_vertical.png" alt="Coreografia"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 flex justify-between items-end">
+                        <h3 class="text-white font-bold text-xl leading-tight w-3/4">Coreografia de Pole Dance e Exotic
+                        </h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="w-full max-w-7xl mx-auto px-6 mt-4">
+                <div class="h-1 w-full bg-gray-200 rounded-full overflow-hidden">
+                    <div class="h-full bg-ambar-red w-1/3 rounded-full" id="carousel-progress"></div>
+                </div>
+                <div class="text-right mt-2 md:hidden">
+                    <span class="text-sm font-semibold text-ambar-orange">Deslize para ver mais ➔</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="relative block w-full h-[60px] md:h-[100px] transform scale-x-[-1]"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                    class="fill-white"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="relative w-full pt-20 pb-40 bg-white">
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-4">Conheça nossas professoras
+                </h2>
+                <p class="text-lg text-ambar-darkred">Profissionais premiadas e apaixonadas pela
+                    transformação através do pole dance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12">
+
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="w-64 h-64 rounded-full p-2 bg-gradient-to-br from-ambar-orange to-ambar-red shadow-[0_10px_30px_rgba(233,142,41,0.3)] mb-6">
+                        <img src="img/IMG_1418.JPEG" alt="Mariana Mosson"
+                            class="w-full h-full object-cover rounded-full border-4 border-white">
+                    </div>
+                    <h3 class="font-serif text-3xl font-bold text-ambar-darkest mb-2">Mariana Mosson</h3>
+                    <p class="text-ambar-orange font-semibold mb-4 uppercase tracking-wider text-sm">Fundadora e
+                        idelizadora do Portal
+                        Âmbar</p>
+
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Praticante de pole dance há 9 anos, Mariana nunca havia feito outras danças ou ginástica antes
+                        de encontrar o pole. Desenvolveu toda a sua força, flexibilidade e lado artístico através da
+                        prática.
+                    </p>
+
+                    <div id="curriculo-mosson" class="overflow-hidden transition-all duration-500 max-h-0 opacity-0">
+                        <ul
+                            class="text-left text-sm text-gray-600 space-y-2 mt-4 bg-ambar-cream/50 p-6 rounded-2xl border border-ambar-orange/20">
+                            <li><span class="font-bold text-ambar-darkred">•</span> Campeã Pole Art Brazil 2024</li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> Campeã Curitiba Pole Arte Heelografy
+                                2024</li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> Campeã Exotic Generation 2024</li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> Campeã Melhores Tricks - Exotic
+                                Generation 2024</li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> Finalista Mundial Itália - Exotic
+                                Finals 2025</li>
+                        </ul>
+                        <p
+                            class="mt-4 italic text-sm font-serif text-ambar-darkest font-semibold border-l-4 border-ambar-orange pl-4 text-left">
+                            "Acredito que todo corpo é capaz de aprender, se desenvolver e se transformar em qualquer
+                            idade!"
+                        </p>
+                    </div>
+
+                    <button onclick="toggleCurriculo('curriculo-mosson', this)"
+                        class="mt-4 flex items-center gap-2 text-ambar-red font-bold hover:text-ambar-darkred transition-colors group focus:outline-none">
+                        <span class="btn-text">Ver currículo completo</span>
+                        <svg class="w-5 h-5 transform transition-transform group-hover:translate-y-1 icon-arrow"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="w-64 h-64 rounded-full p-2 bg-gradient-to-br from-ambar-orange to-ambar-red shadow-[0_10px_30px_rgba(149,33,33,0.3)] mb-6">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=400&q=80"
+                            alt="Mariana Souza" class="w-full h-full object-cover rounded-full border-4 border-white">
+                    </div>
+                    <h3 class="font-serif text-3xl font-bold text-ambar-darkest mb-2">Mariana Souza</h3>
+                    <p class="text-ambar-orange font-semibold mb-4 uppercase tracking-wider text-sm">Co-fundadora Portal
+                        Âmbar</p>
+
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Praticante de Pole Dance há 14 anos, é também Co-fundadora do Studio Gravitarte Dança e aéreos
+                        em Curitiba-PR. Coleciona diversos títulos e indicações importantes no cenário nacional e
+                        internacional.
+                    </p>
+
+                    <div id="curriculo-souza" class="overflow-hidden transition-all duration-500 max-h-0 opacity-0">
+                        <ul
+                            class="text-left text-sm text-gray-600 space-y-2 mt-4 bg-ambar-cream/50 p-6 rounded-2xl border border-ambar-orange/20">
+                            <li><span class="font-bold text-ambar-darkred">•</span> Bicampeã Pro Pole Art Brazil
+                                2022/2023</li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> Over All Curitiba Pole Arte 2022
+                            </li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> Campeã Exotic Generation BR 2024
+                                Flow</li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> Campeã Melhor Coreografia Exotic
+                                Generation BR</li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> Campeã Melhor Leg Works Exotic
+                                Generation BR</li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> Finalista Mundial Itália - Exotic
+                                Finals 2024</li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> Indicação Melhor Bailarina - Dance
+                                Joaçaba 2024</li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> Indicação Melhor Bailarina -
+                                Festival de Dança Timbó 2025</li>
+                        </ul>
+                        <p
+                            class="mt-4 italic text-sm font-serif text-ambar-darkest font-semibold border-l-4 border-ambar-orange pl-4 text-left">
+                            "Acredito e desenvolvo o Pole Dance como uma forma de expressão artística poderosa e
+                            transformadora."
+                        </p>
+                    </div>
+
+                    <button onclick="toggleCurriculo('curriculo-souza', this)"
+                        class="mt-4 flex items-center gap-2 text-ambar-red font-bold hover:text-ambar-darkred transition-colors group focus:outline-none">
+                        <span class="btn-text">Ver currículo completo</span>
+                        <svg class="w-5 h-5 transform transition-transform group-hover:translate-y-1 icon-arrow"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="relative block w-full h-[60px] md:h-[100px]" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                    class="fill-ambar-darkest"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="checkout-kiwify" class="py-24 bg-ambar-darkest text-ambar-cream relative overflow-hidden">
+        <div
+            class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-ambar-red rounded-full blur-[100px] opacity-50 pointer-events-none">
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-ambar-yellow">Sua jornada começa agora.</h2>
+            <p class="text-xl mb-12">Tenha acesso imediato a todas as aulas e à comunidade do Portal
+                Âmbar.</p>
+
+            <div class="bg-ambar-cream text-ambar-darkest rounded-[40px] p-8 md:p-12 shadow-2xl max-w-2xl mx-auto">
+                <p class="text-sm uppercase tracking-widest font-bold text-ambar-red mb-4">Oferta Especial</p>
+                <div class="flex justify-center items-baseline mb-4">
+                    <span class="text-gray-500 line-through text-2xl mr-3">R$ 584,71</span>
+                    <span class="text-5xl font-extrabold text-ambar-darkest">12x R$ 51,40</span>
+                </div>
+                <p class="text-gray-600 mb-8">ou R$ 497,00 à vista</p>
+
+                <ul class="text-left space-y-4 mb-10 max-w-sm mx-auto">
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-600" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> 1 ano de acesso</li>
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-600" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Acesso à Comunidade Exclusiva</li>
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-600" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> 7 dias de garantia</li>
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-600" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Acesso imediato e 100% online</li>
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-600" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Suporte via Whatsapp</li>
+                </ul>
+
+                <a href="https://pay.kiwify.com.br/99jMSuS"
+                    class="block w-full bg-ambar-orange text-ambar-darkest font-bold text-xl py-6 rounded-full animate-cta-pulse transition-all hover:bg-ambar-yellow hover:scale-105 shadow-xl uppercase tracking-wide">
+                    Quero me inscrever agora
+                </a>
+
+                <div class="mt-6 flex justify-center items-center gap-2 text-sm text-gray-500">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                        </path>
+                    </svg>
+                    Pagamento 100% Seguro via Kiwify
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-ambar-darkest text-ambar-cream/50 py-10 text-center border-t border-ambar-red/30">
+        <p class="font-serif italic text-2xl text-ambar-lightorange mb-4">Portal Âmbar</p>
+        <p class="text-sm">© 2026 Projeto Âmbar. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // --- LÓGICA DO ACCORDION (QUEM SÃO AS PROFESSORAS) ---
+        function toggleCurriculo(id, btnElement) {
+            const content = document.getElementById(id);
+            const textSpan = btnElement.querySelector('.btn-text');
+            const arrowIcon = btnElement.querySelector('.icon-arrow');
+
+            if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.opacity = "1";
+                content.style.marginTop = "1rem";
+                textSpan.innerText = "Recolher currículo";
+                arrowIcon.style.transform = "rotate(180deg)";
+            } else {
+                content.style.maxHeight = "0px";
+                content.style.opacity = "0";
+                content.style.marginTop = "0px";
+                textSpan.innerText = "Ver currículo completo";
+                arrowIcon.style.transform = "rotate(0deg)";
+            }
+        }
+
+        // --- LÓGICA DO CARROSSEL DE MODALIDADES ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('carousel-track');
+            const btnPrev = document.getElementById('btn-prev');
+            const btnNext = document.getElementById('btn-next');
+            const progressBar = document.getElementById('carousel-progress');
+
+            if (btnNext && btnPrev && track) {
+                const scrollAmount = 340;
+
+                btnNext.addEventListener('click', () => {
+                    track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                });
+
+                btnPrev.addEventListener('click', () => {
+                    track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                });
+
+                track.addEventListener('scroll', () => {
+                    const maxScrollLeft = track.scrollWidth - track.clientWidth;
+                    const scrollPercentage = (track.scrollLeft / maxScrollLeft) * 100;
+                    const barWidth = Math.max(33, scrollPercentage);
+                    progressBar.style.width = `${barWidth}%`;
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
