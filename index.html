@@ -48,9 +48,14 @@
         }
     </script>
     <style>
-        body{
+        html, body {
             overflow-x: hidden;
             width: 100%;
+            max-width: 100%;
+        }
+
+        ::-webkit-scrollbar:horizontal {
+            display: none;
         }
 
         .bg-hero-pattern {
@@ -70,7 +75,7 @@
     </style>
 </head>
 
-<body class="font-sans bg-ambar-cream text-ambar-darkest antialiased overflow-x-hidden">
+<body class="font-sans bg-ambar-cream text-ambar-darkest antialiased overflow-x-hidden w-full max-w-full">
 
     <section
         class="relative w-full bg-hero-pattern min-h-[90vh] flex flex-col justify-center items-center text-center px-6 pt-20 pb-40">
