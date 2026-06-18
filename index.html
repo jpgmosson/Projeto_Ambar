@@ -244,7 +244,7 @@
                         </svg>
                     </div>
                     <h3 class="font-serif text-2xl font-bold mb-4">Sequências e transições</h3>
-                    <p class="text-gray-600">Sequencias de combos na barra, exercícios coreografados, tricks e
+                    <p class="text-gray-600">Sequencias de combos na barra, sequências exotic, tricks e
                         transições com e sem salto, aulas de parada de mão e floowork</p>
                 </div>
 
@@ -316,22 +316,28 @@
             </div>
         </div>
 
-        <div id="carousel-track" class="flex overflow-x-auto snap-x snap-mandatory gap-6 px-6 pb-8 hide-scroll-bar">
+        <div id="carousel-track"
+            class="flex overflow-x-auto snap-x snap-mandatory gap-6 px-6 pb-8 hide-scroll-bar items-center">
 
             <div onclick="toggleCard(this)"
-                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex border border-transparent hover:border-ambar-orange/30">
-                <div class="w-[280px] md:w-[320px] h-full shrink-0 relative group">
-                    <img src="img/fundo01_vertical.png" alt="Aquecimentos"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
+                <div
+                    class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
+                    <img src="img/Aquecimento.JPG"
+                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
+                        alt="">
+                    <img src="img/Aquecimento.JPG" alt="Aquecimentos"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                        class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
-                    <div class="absolute bottom-0 left-0 w-full p-6 text-left">
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
                         <h3 class="text-white font-bold text-xl leading-tight">Aquecimentos Gerais e Específicos</h3>
                     </div>
                 </div>
                 <div
-                    class="w-[280px] md:w-[320px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content">
+                    class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
                     <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Aquecimentos Gerais e Específicos
                     </h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
@@ -341,19 +347,24 @@
             </div>
 
             <div onclick="toggleCard(this)"
-                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex border border-transparent hover:border-ambar-orange/30">
-                <div class="w-[280px] md:w-[320px] h-full shrink-0 relative group">
-                    <img src="img/fundo02_vertical.png" alt="Fortalecimentos"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
+                <div
+                    class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
+                    <img src="img/fortalecimento.JPG"
+                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
+                        alt="">
+                    <img src="img/fortalecimento.JPG" alt="Fortalecimentos"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                        class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
-                    <div class="absolute bottom-0 left-0 w-full p-6 text-left">
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
                         <h3 class="text-white font-bold text-xl leading-tight">Fortalecimentos com e sem barra</h3>
                     </div>
                 </div>
                 <div
-                    class="w-[280px] md:w-[320px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content">
+                    class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
                     <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Fortalecimentos com e sem barra
                     </h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
@@ -364,19 +375,24 @@
             </div>
 
             <div onclick="toggleCard(this)"
-                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex border border-transparent hover:border-ambar-orange/30">
-                <div class="w-[280px] md:w-[320px] h-full shrink-0 relative group">
-                    <img src="img/fundo04_vertical.png" alt="Flexibilidade"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
+                <div
+                    class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
+                    <img src="img/flexibilidade.JPG"
+                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
+                        alt="">
+                    <img src="img/flexibilidade.JPG" alt="Flexibilidade"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                        class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
-                    <div class="absolute bottom-0 left-0 w-full p-6 text-left">
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
                         <h3 class="text-white font-bold text-xl leading-tight">Flexibilidade</h3>
                     </div>
                 </div>
                 <div
-                    class="w-[280px] md:w-[320px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content">
+                    class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
                     <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Flexibilidade</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
                     <p class="text-gray-600 leading-relaxed text-sm md:text-base">Neste módulo você encontra aulas que
@@ -386,19 +402,24 @@
             </div>
 
             <div onclick="toggleCard(this)"
-                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex border border-transparent hover:border-ambar-orange/30">
-                <div class="w-[280px] md:w-[320px] h-full shrink-0 relative group">
-                    <img src="img/fundo01_vertical.png" alt="Sequências"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
+                <div
+                    class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
+                    <img src="img/SequenciasPole.JPG"
+                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
+                        alt="">
+                    <img src="img/SequenciasPole.JPG" alt="Sequências"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                        class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
-                    <div class="absolute bottom-0 left-0 w-full p-6 text-left">
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
                         <h3 class="text-white font-bold text-xl leading-tight">Sequências / Transições</h3>
                     </div>
                 </div>
                 <div
-                    class="w-[280px] md:w-[320px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content">
+                    class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
                     <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Sequências / Transições</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
                     <p class="text-gray-600 leading-relaxed text-sm md:text-base">Aqui você encontra nossas pequenas
@@ -408,41 +429,52 @@
             </div>
 
             <div onclick="toggleCard(this)"
-                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex border border-transparent hover:border-ambar-orange/30">
-                <div class="w-[280px] md:w-[320px] h-full shrink-0 relative group">
-                    <img src="img/fundo02_vertical.png" alt="Exercícios Coreografados"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
+                <div
+                    class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
+                    <img src="img/SequenciasExotic.jpeg"
+                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
+                        alt="">
+                    <img src="img/SequenciasExotic.jpeg" alt="Sequências Exotic"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                        class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
-                    <div class="absolute bottom-0 left-0 w-full p-6 text-left">
-                        <h3 class="text-white font-bold text-xl leading-tight">Exercícios Coreografados</h3>
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
+                        <h3 class="text-white font-bold text-xl leading-tight">Sequências Exotic</h3>
                     </div>
                 </div>
                 <div
-                    class="w-[280px] md:w-[320px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Exercícios Coreografados</h3>
+                    class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Sequências Exotic</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">Aqui temos diversos exercícios de
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">Aqui temos diversas sequências exotic
+                        de
                         técnicas específicas como legwork’s, caminhadas, edge works, e muito mais. Que irão te auxiliar
                         no desenvolvimento técnico, além de treinar musicalidade e expressão corporal.</p>
                 </div>
             </div>
 
             <div onclick="toggleCard(this)"
-                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex border border-transparent hover:border-ambar-orange/30">
-                <div class="w-[280px] md:w-[320px] h-full shrink-0 relative group">
-                    <img src="img/fundo04_vertical.png" alt="Tricks"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
+                <div
+                    class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
+                    <img src="img/Tricks.JPG"
+                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
+                        alt="">
+                    <img src="img/Tricks.JPG" alt="Tricks"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                        class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
-                    <div class="absolute bottom-0 left-0 w-full p-6 text-left">
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
                         <h3 class="text-white font-bold text-xl leading-tight">Tricks</h3>
                     </div>
                 </div>
                 <div
-                    class="w-[280px] md:w-[320px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content">
+                    class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
                     <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Tricks</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
                     <p class="text-gray-600 leading-relaxed text-sm md:text-base">Na nossa seção de tricks você encontra
@@ -452,19 +484,24 @@
             </div>
 
             <div onclick="toggleCard(this)"
-                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex border border-transparent hover:border-ambar-orange/30">
-                <div class="w-[280px] md:w-[320px] h-full shrink-0 relative group">
-                    <img src="img/fundo01_vertical.png" alt="Coreografias"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
+                <div
+                    class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
+                    <img src="img/CoreografiasExotic.JPG"
+                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
+                        alt="">
+                    <img src="img/CoreografiasExotic.JPG" alt="Coreografias"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent">
+                        class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
-                    <div class="absolute bottom-0 left-0 w-full p-6 text-left">
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
                         <h3 class="text-white font-bold text-xl leading-tight">Coreografias</h3>
                     </div>
                 </div>
                 <div
-                    class="w-[280px] md:w-[320px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content">
+                    class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
                     <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Coreografias</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
                     <p class="text-gray-600 leading-relaxed text-sm md:text-base">Aqui você encontra nossas coreografias
@@ -943,35 +980,101 @@
                     track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
                 });
 
+                let isScrolling = false;
                 track.addEventListener('scroll', () => {
-                    const maxScrollLeft = track.scrollWidth - track.clientWidth;
-                    const scrollPercentage = (track.scrollLeft / maxScrollLeft) * 100;
-                    const barWidth = Math.max(33, scrollPercentage);
-                    progressBar.style.width = `${barWidth}%`;
+                    if (!isScrolling) {
+                        window.requestAnimationFrame(() => {
+                            const maxScrollLeft = track.scrollWidth - track.clientWidth;
+                            const scrollPercentage = (track.scrollLeft / maxScrollLeft) * 100;
+                            const barWidth = Math.max(33, scrollPercentage);
+                            progressBar.style.width = `${barWidth}%`;
+                            isScrolling = false;
+                        });
+                        isScrolling = true;
+                    }
                 });
             }
         });
+
         function toggleCard(clickedCard) {
             const allCards = document.querySelectorAll('.carousel-card');
-
-            const isAlreadyExpanded = clickedCard.classList.contains('w-[560px]');
+            const isAlreadyExpanded = clickedCard.classList.contains('is-expanded');
 
             allCards.forEach(card => {
-                card.classList.remove('w-[560px]', 'md:w-[640px]');
-                card.classList.add('w-[280px]', 'md:w-[320px]');
+                card.classList.remove('is-expanded');
+                card.classList.remove('w-[85vw]', 'md:w-[850px]', 'h-[650px]', 'md:h-[550px]');
+                card.classList.add('w-[280px]', 'md:w-[320px]', 'h-[400px]');
+
+                const imgContainer = card.querySelector('.image-container');
+                if (imgContainer) {
+                    imgContainer.classList.remove('w-[85vw]', 'md:w-[500px]', 'h-[350px]', 'md:h-[550px]');
+                    imgContainer.classList.add('w-[280px]', 'md:w-[320px]', 'h-[400px]', 'md:h-[400px]');
+                }
+
+                const imgMain = card.querySelector('.img-main');
+                if (imgMain) imgMain.style.objectFit = 'cover';
+
+                const imgBlur = card.querySelector('.img-blur');
+                if (imgBlur) {
+                    imgBlur.classList.remove('opacity-60');
+                    imgBlur.classList.add('opacity-0');
+                }
+
+                const overlay = card.querySelector('.gradient-overlay');
+                if (overlay) overlay.style.opacity = '1';
+
+                const title = card.querySelector('.card-title');
+                if (title) {
+                    title.style.opacity = '1';
+                    title.style.transform = 'translateY(0)';
+                }
 
                 const content = card.querySelector('.card-content');
-                if (content) content.classList.remove('opacity-100');
+                if (content) {
+                    content.classList.remove('opacity-100');
+                    content.classList.add('hidden', 'md:flex');
+                }
             });
 
             if (!isAlreadyExpanded) {
-                clickedCard.classList.remove('w-[280px]', 'md:w-[320px]');
-                clickedCard.classList.add('w-[560px]', 'md:w-[640px]');
+                clickedCard.classList.add('is-expanded');
+
+                clickedCard.classList.remove('w-[280px]', 'md:w-[320px]', 'h-[400px]');
+                clickedCard.classList.add('w-[85vw]', 'md:w-[850px]', 'h-[650px]', 'md:h-[550px]');
+
+                const imgContainer = clickedCard.querySelector('.image-container');
+                if (imgContainer) {
+                    imgContainer.classList.remove('w-[280px]', 'md:w-[320px]', 'h-[400px]', 'md:h-[400px]');
+                    imgContainer.classList.add('w-[85vw]', 'md:w-[500px]', 'h-[350px]', 'md:h-[550px]');
+                }
+
+                const content = clickedCard.querySelector('.card-content');
+                if (content) {
+                    content.classList.remove('hidden');
+                }
 
                 setTimeout(() => {
-                    const content = clickedCard.querySelector('.card-content');
+                    const imgMain = clickedCard.querySelector('.img-main');
+                    if (imgMain) imgMain.style.objectFit = 'contain';
+
+                    const imgBlur = clickedCard.querySelector('.img-blur');
+                    if (imgBlur) {
+                        imgBlur.classList.remove('opacity-0');
+                        imgBlur.classList.add('opacity-60');
+                    }
+
+                    const overlay = clickedCard.querySelector('.gradient-overlay');
+                    if (overlay) overlay.style.opacity = '0';
+
+                    const title = clickedCard.querySelector('.card-title');
+                    if (title) {
+                        title.style.opacity = '0';
+                        title.style.transform = 'translateY(20px)';
+                    }
+
                     if (content) content.classList.add('opacity-100');
                 }, 200);
+
                 setTimeout(() => {
                     clickedCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
                 }, 300);
