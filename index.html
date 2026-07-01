@@ -78,22 +78,28 @@
 
 <body class="font-sans bg-ambar-cream text-ambar-darkest antialiased overflow-x-hidden w-full max-w-full">
 
+    <div class="fixed top-4 right-4 z-50">
+        <button id="lang-toggle" onclick="toggleLanguage()" class="bg-ambar-orange text-ambar-darkest font-bold py-2 px-4 rounded-full shadow-lg hover:bg-ambar-yellow transition-colors">
+            English
+        </button>
+    </div>
+
     <section
         class="relative w-full bg-hero-pattern min-h-[90vh] flex flex-col justify-center items-center text-center px-6 pt-20 pb-40">
         <div class="max-w-4xl mx-auto relative z-10">
             <img src="img/Logo_A_off.png" alt="Logo Portal Âmbar" class="h-24 w-auto mx-auto mb-8 object-contain">
 
-            <h1 class="font-serif text-4xl md:text-6xl text-ambar-cream font-bold leading-tight mb-6">
+            <h1 class="font-serif text-4xl md:text-6xl text-ambar-cream font-bold leading-tight mb-6" data-i18n="hero_title">
                 Portal <span class="text-ambar-yellow italic"> Âmbar</span>
             </h1>
-            <p class="text-lg md:text-xl text-ambar-cream/90 font-light max-w-2xl mx-auto mb-10">
+            <p class="text-lg md:text-xl text-ambar-cream/90 font-light max-w-2xl mx-auto mb-10" data-i18n="hero_desc_full">
                 Aqui no <span class="text-ambar-yellow italic font-serif font-bold">PORTAL ÂMBAR</span>,
                 você encontra um caminho. Um caminho para um corpo mais forte, mais flexível mais artístico, mais
                 criativo, mais potente. Um caminho para encontrar e desenvolver sua identidade com a precisão da técnica
                 e o poder da arte.
             </p>
 
-            <a href="#checkout-kiwify"
+            <a href="#checkout-kiwify" data-i18n="hero_cta"
                 class="inline-block bg-ambar-orange text-ambar-darkest font-bold text-lg md:text-xl px-10 py-5 rounded-full animate-cta-pulse transition-all hover:bg-ambar-yellow">
                 Quero começar
             </a>
@@ -122,37 +128,37 @@
             </div>
 
             <div class="md:w-1/2">
-                <h2 class="font-serif text-3xl md:text-5xl font-bold text-ambar-darkred mb-6"> Acreditamos no corpo como
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-ambar-darkred mb-6" data-i18n="sec1_title"> Acreditamos no corpo como
                     potencia. <br>
                     Na dança como expressão. <br>
                     Na criatividade como caminho</h2>
-                <p class="text-lg mb-6 leading-relaxed">
+                <p class="text-lg mb-6 leading-relaxed" data-i18n="sec1_p1">
                     O <strong>Portal Âmbar</strong> foi criado para você que deseja ampliar seus treinos e estudos para
                     além das salas do studio. Para quem deseja treinar com liberdade e autonomia. Através de uma
                     metodologia testada e consistente, desenvolvida pela Mariana Souza, professora do portal, nós te
                     guiaremos pelo caminho artístico de forma progressiva, com módulos básicos, intermediários e
                     avançados, para que você possa sempre consolidar suas bases seguir se desenvolvendo.
-                <p class="text-lg mb-8 leading-relaxed">
+                <p class="text-lg mb-8 leading-relaxed" data-i18n="sec1_p2">
                     Aqui, você aprende no seu ritmo, a qualquer hora, com aulas completas de fortalecimento,
                     flexibilidade, coreografias, exercícios específicos e muito mais. Todos os módulos foram pensados
                     para que você amplie seu repertório, prepare seu corpo e alimente sua criatividade.
                 </p>
                 <ul class="space-y-4 font-semibold text-ambar-red">
-                    <li class="flex items-center gap-3">
+                    <li class="flex items-center gap-3" data-i18n="sec1_li1">
                         <svg class="w-6 h-6 text-ambar-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
                         Do básico ao avançado no seu ritmo
                     </li>
-                    <li class="flex items-center gap-3">
+                    <li class="flex items-center gap-3" data-i18n="sec1_li2">
                         <svg class="w-6 h-6 text-ambar-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
                         Aulas novas todo mês
                     </li>
-                    <li class="flex items-center gap-3">
+                    <li class="flex items-center gap-3" data-i18n="sec1_li3">
                         <svg class="w-6 h-6 text-ambar-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
@@ -177,7 +183,7 @@
     <section class="relative w-full pt-20 pb-40 bg-ambar-yellow/20">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                <h1 class="font-serif text-4xl font-bold text-ambar-darkest mb-4">Tudo que você vai conquistar com o
+                <h1 class="font-serif text-4xl font-bold text-ambar-darkest mb-4" data-i18n="sec2_title">Tudo que você vai conquistar com o
                     Portal Âmbar</h1>
             </div>
 
@@ -196,8 +202,8 @@
                             </g>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold mb-4">Força</h3>
-                    <p class="text-gray-600">Sequencias de fortalecimento com e sem barra para preparar seu corpo de
+                    <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c1_t">Força</h3>
+                    <p class="text-gray-600" data-i18n="sec2_c1_p">Sequencias de fortalecimento com e sem barra para preparar seu corpo de
                         forma segura</p>
                 </div>
 
@@ -215,8 +221,8 @@
                             </g>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold mb-4">Flexibilidade</h3>
-                    <p class="text-gray-600">Aulas completas de flexibilidade parar melhorar seu alongamento e
+                    <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c2_t">Flexibilidade</h3>
+                    <p class="text-gray-600" data-i18n="sec2_c2_p">Aulas completas de flexibilidade parar melhorar seu alongamento e
                         mobilidade</p>
                 </div>
 
@@ -229,8 +235,8 @@
                                 d="M12 1v1l-.77-.64L7.76 5.5l3.24 2V5.16L10.78 5L12 3.56V23h2v-9.76l1.93-1.93c2.57.4 5.2-.95 6.73-2.48l-1.42-1.42C20.1 8.56 17.7 9.61 16 9.26l-2-2.02V1m3 3a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-6 3.76l-3.9 3.9c-1.85 1.84-2.79 3.19-4.04 6.5l1.88.7c1-2.66 1.72-3.72 2.93-5.02l1.35 1.35l-4.95 4.95l1.42 1.42L11 16.24Z" />
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold mb-4">Coreografias</h3>
-                    <p class="text-gray-600">Coreografias completas com e sem salto para ampliar seu repertorio
+                    <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c3_t">Coreografias</h3>
+                    <p class="text-gray-600" data-i18n="sec2_c3_p">Coreografias completas com e sem salto para ampliar seu repertorio
                         artístico</p>
                 </div>
 
@@ -243,8 +249,8 @@
                                 d="M246 144a6 6 0 0 1-12 0a98.11 98.11 0 0 0-98-98a90.1 90.1 0 0 0-90 90a82.1 82.1 0 0 0 82 82a74.09 74.09 0 0 0 74-74a66.08 66.08 0 0 0-66-66a58.07 58.07 0 0 0-58 58a50.06 50.06 0 0 0 50 50a42 42 0 0 0 42-42a34 34 0 0 0-34-34a26 26 0 0 0-26 26a18 18 0 0 0 18 18a10 10 0 0 0 10-10a2 2 0 0 0-2-2a6 6 0 0 1 0-12a14 14 0 0 1 14 14a22 22 0 0 1-22 22a30 30 0 0 1-30-30a38 38 0 0 1 38-38a46.06 46.06 0 0 1 46 46a54.06 54.06 0 0 1-54 54a62.07 62.07 0 0 1-62-62a70.08 70.08 0 0 1 70-70a78.09 78.09 0 0 1 78 78a86.1 86.1 0 0 1-86 86a94.11 94.11 0 0 1-94-94A102.12 102.12 0 0 1 136 34a110.13 110.13 0 0 1 110 110" />
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold mb-4">Sequências e transições</h3>
-                    <p class="text-gray-600">Sequencias de combos na barra, sequências exotic, tricks e
+                    <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c4_t">Sequências e transições</h3>
+                    <p class="text-gray-600" data-i18n="sec2_c4_p">Sequencias de combos na barra, sequências exotic, tricks e
                         transições com e sem salto, aulas de parada de mão e floowork</p>
                 </div>
 
@@ -258,8 +264,8 @@
                             </path>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold mb-4">Comunidade</h3>
-                    <p class="text-gray-600">Fazer parte de uma comunidade acolhedora que evolui junto, respeita seu
+                    <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c5_t">Comunidade</h3>
+                    <p class="text-gray-600" data-i18n="sec2_c5_p">Fazer parte de uma comunidade acolhedora que evolui junto, respeita seu
                         tempo e celebra cada passo da sua jornada</p>
                 </div>
 
@@ -273,8 +279,8 @@
                             </path>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold mb-4">Autoestima</h3>
-                    <p class="text-gray-600">Sentir orgulho do seu corpo e do que ele é capaz de fazer ao mesmo tempo
+                    <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c6_t">Autoestima</h3>
+                    <p class="text-gray-600" data-i18n="sec2_c6_p">Sentir orgulho do seu corpo e do que ele é capaz de fazer ao mesmo tempo
                         que desenvolve sua identidade artística sem pressão ou julgamento</p>
                 </div>
             </div>
@@ -292,9 +298,9 @@
     <section class="relative w-full pt-20 pb-40 bg-ambar-cream overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end relative z-10">
             <div>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-4">Um Portal. <span
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_title">Um Portal. <span
                         class="text-ambar-orange">Várias Modalidades.</span></h2>
-                <p class="text-lg text-ambar-red">Descubra o que te movimenta.</p>
+                <p class="text-lg text-ambar-red" data-i18n="sec3_subtitle">Descubra o que te movimenta.</p>
             </div>
 
             <div class="hidden md:flex gap-4">
@@ -333,15 +339,15 @@
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight">Aquecimentos Gerais e Específicos</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card1_t">Aquecimentos Gerais e Específicos</h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Aquecimentos Gerais e Específicos
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card1_t_sub">Aquecimentos Gerais e Específicos
                     </h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">Aqui você encontra aulas completas
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card1_p">Aqui você encontra aulas completas
                         para preparar o seu corpo para qualquer uma de nossas práticas.</p>
                 </div>
             </div>
@@ -360,15 +366,15 @@
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight">Fortalecimentos com e sem barra</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card2_t">Fortalecimentos com e sem barra</h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Fortalecimentos com e sem barra
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card2_t_sub">Fortalecimentos com e sem barra
                     </h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">Aqui você encontra aulas para
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card2_p">Aqui você encontra aulas para
                         fortalecer seu corpo de forma livre e aulas com exercícios realizados na Barra que serão
                         funcionais para o desenvolvimento da sua técnica e força no pole.</p>
                 </div>
@@ -388,14 +394,14 @@
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight">Flexibilidade</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card3_t">Flexibilidade</h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Flexibilidade</h3>
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card3_t_sub">Flexibilidade</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">Neste módulo você encontra aulas que
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card3_p">Neste módulo você encontra aulas que
                         irão te ajudar a desenvolver sua mobilidade e alongamento. Assim como treino de figuras de
                         flexibilidade específicas.</p>
                 </div>
@@ -415,14 +421,14 @@
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight">Sequências / Transições</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card4_t">Sequências / Transições</h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Sequências / Transições</h3>
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card4_t_sub">Sequências / Transições</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">Aqui você encontra nossas pequenas
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card4_p">Aqui você encontra nossas pequenas
                         sequências e combos com e sem salto que podem acrescentar e ajudar a destravar sua criatividade
                         no contato com a barra.</p>
                 </div>
@@ -442,14 +448,14 @@
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight">Sequências Exotic</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card5_t">Sequências Exotic</h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Sequências Exotic</h3>
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card5_t_sub">Sequências Exotic</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">Aqui temos diversas sequências exotic
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card5_p">Aqui temos diversas sequências exotic
                         de
                         técnicas específicas como legwork’s, caminhadas, edge works, e muito mais. Que irão te auxiliar
                         no desenvolvimento técnico, além de treinar musicalidade e expressão corporal.</p>
@@ -470,14 +476,14 @@
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight">Tricks</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card6_t">Tricks</h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Tricks</h3>
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card6_t_sub">Tricks</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">Na nossa seção de tricks você encontra
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card6_p">Na nossa seção de tricks você encontra
                         exercícios e treinos para desenvolver suas acrobacias de forma técnica e criativa como quedas,
                         flips, cama de gato, parada de mão e muito mais.</p>
                 </div>
@@ -497,14 +503,14 @@
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight">Coreografias</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card7_t">Coreografias</h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4">Coreografias</h3>
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card7_t_sub">Coreografias</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">Aqui você encontra nossas coreografias
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card7_p">Aqui você encontra nossas coreografias
                         com e sem salto. Cheias de musicalidade e criatividade, com a assinatura de cada professora para
                         que você possa treinar e desenvolver sua expressividade.</p>
                 </div>
@@ -517,7 +523,7 @@
                 <div class="h-full bg-ambar-red w-1/3 rounded-full" id="carousel-progress"></div>
             </div>
             <div class="text-right mt-2 md:hidden">
-                <span class="text-sm font-semibold text-ambar-orange">Deslize para ver mais ➔</span>
+                <span class="text-sm font-semibold text-ambar-orange" data-i18n="sec3_swipe">Deslize para ver mais ➔</span>
             </div>
         </div>
         </div>
@@ -535,9 +541,9 @@
     <section class="relative w-full pt-20 pb-40 bg-white">
         <div class="max-w-5xl mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-4">Conheça nossas professoras
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-4" data-i18n="sec4_title">Conheça nossas professoras
                 </h2>
-                <p class="text-lg text-ambar-darkred">Profissionais premiadas e apaixonadas pela
+                <p class="text-lg text-ambar-darkred" data-i18n="sec4_subtitle">Profissionais premiadas e apaixonadas pela
                     transformação através do pole dance.</p>
             </div>
 
@@ -550,11 +556,11 @@
                             class="w-full h-full object-cover rounded-full border-4 border-white">
                     </div>
                     <h3 class="font-serif text-3xl font-bold text-ambar-darkest mb-2">Mariana Mosson</h3>
-                    <p class="text-ambar-orange font-semibold mb-4 uppercase tracking-wider text-sm">Fundadora e
+                    <p class="text-ambar-orange font-semibold mb-4 uppercase tracking-wider text-sm" data-i18n="sec4_t1_role">Fundadora e
                         idelizadora do Portal
                         Âmbar</p>
 
-                    <p class="text-gray-600 mb-4 leading-relaxed">
+                    <p class="text-gray-600 mb-4 leading-relaxed" data-i18n="sec4_t1_desc">
                         Praticante de pole dance há 9 anos, Mariana nunca havia feito outras danças ou ginástica antes
                         de encontrar o pole. Desenvolveu toda a sua força, flexibilidade e lado artístico através da
                         prática.
@@ -573,9 +579,15 @@
                                 Finals 2025</li>
                             <li><span class="font-bold text-ambar-darkred">•</span> Co-produtora do Festival Sexy
                                 September</li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> Campeã Overall Forte Pole Champ 2026
+                            </li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> ⁠Campeã Latino America Pole Up
+                                Argentina 2026
+                            </li>
+
                         </ul>
                         <p
-                            class="mt-4 italic text-sm font-serif text-ambar-darkest font-semibold border-l-4 border-ambar-orange pl-4 text-left">
+                            class="mt-4 italic text-sm font-serif text-ambar-darkest font-semibold border-l-4 border-ambar-orange pl-4 text-left" data-i18n="sec4_t1_quote">
                             "Acredito que todo corpo é capaz de aprender, se desenvolver e se transformar em qualquer
                             idade!"
                         </p>
@@ -599,11 +611,11 @@
                             class="w-full h-full object-cover object-[center_80%] rounded-full border-4 border-white">
                     </div>
                     <h3 class="font-serif text-3xl font-bold text-ambar-darkest mb-2">Mariana Souza</h3>
-                    <p class="text-ambar-orange font-semibold mb-4 uppercase tracking-wider text-sm">Co-fundadora do
+                    <p class="text-ambar-orange font-semibold mb-4 uppercase tracking-wider text-sm" data-i18n="sec4_t2_role">Co-fundadora do
                         Portal
                         Âmbar</p>
 
-                    <p class="text-gray-600 mb-4 leading-relaxed">
+                    <p class="text-gray-600 mb-4 leading-relaxed" data-i18n="sec4_t2_desc">
                         Praticante de Pole Dance há 14 anos, é também Co-fundadora do Studio Gravitarte Dança e aéreos
                         em Curitiba-PR. Coleciona diversos títulos e indicações importantes no cenário nacional e
                         internacional.
@@ -632,7 +644,7 @@
                                 Festival Sexy September</li>
                         </ul>
                         <p
-                            class="mt-4 italic text-sm font-serif text-ambar-darkest font-semibold border-l-4 border-ambar-orange pl-4 text-left">
+                            class="mt-4 italic text-sm font-serif text-ambar-darkest font-semibold border-l-4 border-ambar-orange pl-4 text-left" data-i18n="sec4_t2_quote">
                             "Acredito e desenvolvo o Pole Dance como uma forma de expressão artística poderosa e
                             transformadora."
                         </p>
@@ -657,9 +669,9 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-12 gap-16">
 
             <div class="md:col-span-5 flex flex-col justify-start">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-6">Perguntas <span
-                        class="text-ambar-orange">frequentes</span></h2>
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-6" data-i18n="sec5_title_p1">Perguntas <span
+                        class="text-ambar-orange" data-i18n="sec5_title_p2">frequentes</span></h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-i18n="sec5_desc">
                     Ainda tem dúvidas se o Portal Âmbar é o lugar certo para você ou como funciona nosso acesso?
                     Separamos as respostas para as perguntas mais comuns.
                 </p>
@@ -679,7 +691,7 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg">E se eu me arrepender?</span>
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q1">E se eu me arrepender?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -689,7 +701,7 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600">Você tem até 7 dias para desistir e nós devolvemos o seu
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a1">Você tem até 7 dias para desistir e nós devolvemos o seu
                             dinheiro integralmente.</div>
                     </div>
                 </div>
@@ -698,7 +710,7 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg">Posso cancelar depois dos 7 dias?</span>
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q2">Posso cancelar depois dos 7 dias?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -708,7 +720,7 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600">Não, você só tem os 7 primeiros dias disponíveis para
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a2">Não, você só tem os 7 primeiros dias disponíveis para
                             cancelamento e reembolso. Depois disso, você se compromete com a assinatura de 1 ano.</div>
                     </div>
                 </div>
@@ -717,7 +729,7 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg">O que está incluso?</span>
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q3">O que está incluso?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -727,7 +739,7 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600">Acesso ilimitado a todas as aulas gravadas, bônus e
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a3">Acesso ilimitado a todas as aulas gravadas, bônus e
                             comunidade por um período de 1 ano.</div>
                     </div>
                 </div>
@@ -736,7 +748,7 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg">As aulas saem do ar?</span>
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q4">As aulas saem do ar?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -746,7 +758,7 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600">Não, as aulas são permanentes dentro do seu período de
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a4">Não, as aulas são permanentes dentro do seu período de
                             acesso de 1 ano.</div>
                     </div>
                 </div>
@@ -755,7 +767,7 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg">Sou iniciante, esse curso é pra mim?</span>
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q5">Sou iniciante, esse curso é pra mim?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -765,7 +777,7 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600">Sim! Temos módulos básicos, mas é necessário que você já
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a5">Sim! Temos módulos básicos, mas é necessário que você já
                             tenha tido um contato prévio com o pole dance ou exotic para fazer as aulas dessas
                             modalidades. Já para as aulas que não precisam de barra, elas são para todos os níveis!
                         </div>
@@ -776,7 +788,7 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg">Por qual aula eu começo?</span>
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q6">Por qual aula eu começo?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -786,7 +798,7 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600">Depende de qual modalidade você deseja praticar, mas é
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a6">Depende de qual modalidade você deseja praticar, mas é
                             sempre importante começar por um dos aquecimentos, passar por uma aula de fortalecimento e
                             só então ir para as específicas. Temos um PDF com sugestões de combos para guiar seus
                             treinos!</div>
@@ -797,7 +809,7 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg">Não tenho barra, esse curso é pra mim?</span>
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q7">Não tenho barra, esse curso é pra mim?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -807,7 +819,7 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600">Sim! Temos diversas aulas que não dependem da barra.
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a7">Sim! Temos diversas aulas que não dependem da barra.
                             Aproveite para fortalecer seu corpo, desenvolver sua flexibilidade e aprender tricks livres.
                             Quando tiver sua própria barra, você poderá aplicar toda essa base nas demais aulas.</div>
                     </div>
@@ -817,7 +829,7 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg">Não tenho força nem flexibilidade, consigo
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q8">Não tenho força nem flexibilidade, consigo
                             fazer?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
@@ -828,7 +840,7 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600">Com certeza! A plataforma é para todos os corpos. Você vai
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a8">Com certeza! A plataforma é para todos os corpos. Você vai
                             desenvolvendo e conquistando sua força e sua flexibilidade gradativamente no decorrer das
                             aulas.</div>
                     </div>
@@ -838,7 +850,7 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg">Outras dúvidas rápidas (Pagamento, Salto,
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q9">Outras dúvidas rápidas (Pagamento, Salto,
                             Suporte)</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
@@ -849,7 +861,7 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600 space-y-2">
+                        <div class="px-6 pb-5 text-gray-600 space-y-2" data-i18n="faq_a9">
                             <p><strong>Formas de pagamento:</strong> Cartão de crédito em até 12x, PIX ou Boleto.</p>
                             <p><strong>Aulas Novas:</strong> Temos aulas novas todos os meses!</p>
                             <p><strong>Uso de salto:</strong> Você pode fazer as aulas com ou sem salto, como se sentir
@@ -879,18 +891,18 @@
         </div>
 
         <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-ambar-yellow">Sua jornada começa agora.
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-ambar-yellow" data-i18n="pricing_title">Sua jornada começa agora.
             </h2>
-            <p class="text-xl mb-12">Tenha acesso imediato a todas as aulas e à comunidade do Portal
+            <p class="text-xl mb-12" data-i18n="pricing_subtitle">Tenha acesso imediato a todas as aulas e à comunidade do Portal
                 Âmbar.</p>
 
             <div class="bg-ambar-cream text-ambar-darkest rounded-[40px] p-8 md:p-12 shadow-2xl max-w-2xl mx-auto">
-                <p class="text-sm uppercase tracking-widest font-bold text-ambar-red mb-4">Oferta Especial</p>
+                <p class="text-sm uppercase tracking-widest font-bold text-ambar-red mb-4" data-i18n="pricing_offer">Oferta Especial</p>
                 <div class="flex justify-center items-baseline mb-4">
                     <span class="text-gray-500 line-through text-2xl mr-3">R$ 584,71</span>
                     <span class="text-5xl font-extrabold text-ambar-darkest">12x R$ 51,40</span>
                 </div>
-                <p class="text-gray-600 mb-8">ou R$ 497,00 à vista</p>
+                <p class="text-gray-600 mb-8" data-i18n="pricing_cash">ou R$ 497,00 à vista</p>
 
                 <ul class="text-left space-y-4 mb-10 max-w-sm mx-auto">
                     <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-600" fill="none"
@@ -921,7 +933,7 @@
                 </ul>
 
                 <a href="https://pay.kiwify.com.br/99jMSuS"
-                    class="block w-full bg-ambar-orange text-ambar-darkest font-bold text-xl py-6 rounded-full animate-cta-pulse transition-all hover:bg-ambar-yellow hover:scale-105 shadow-xl uppercase tracking-wide">
+                    class="block w-full bg-ambar-orange text-ambar-darkest font-bold text-xl py-6 rounded-full animate-cta-pulse transition-all hover:bg-ambar-yellow hover:scale-105 shadow-xl uppercase tracking-wide" data-i18n="pricing_btn">
                     Quero me inscrever agora
                 </a>
 
@@ -939,10 +951,48 @@
 
     <footer class="bg-ambar-darkest text-ambar-cream/50 py-10 text-center border-t border-ambar-red/30">
         <p class="font-serif italic text-2xl text-ambar-lightorange mb-4">Portal Âmbar</p>
-        <p class="text-sm">© 2026 Projeto Âmbar. Todos os direitos reservados.</p>
+        <p class="text-sm" data-i18n="footer_rights">© 2026 Projeto Âmbar. Todos os direitos reservados.</p>
     </footer>
 
     <script>
+        let currentLang = 'pt';
+        const translations = {};
+
+        async function loadTranslations(lang) {
+            if (!translations[lang]) {
+                try {
+                    const response = await fetch(`lang/${lang}.json`);
+                    translations[lang] = await response.json();
+                } catch (error) {
+                    console.error("Erro ao carregar tradução:", error);
+                    return;
+                }
+            }
+            applyTranslations(lang);
+        }
+
+        function applyTranslations(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+            
+            const langBtn = document.getElementById('lang-toggle');
+            if (langBtn) {
+                langBtn.innerText = lang === 'pt' ? 'English' : 'Português';
+            }
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'pt' ? 'en' : 'pt';
+            loadTranslations(currentLang);
+        }
+
         function toggleCurriculo(id, btnElement) {
             const content = document.getElementById(id);
             const textSpan = btnElement.querySelector('.btn-text');
@@ -964,6 +1014,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            loadTranslations('pt');
             const track = document.getElementById('carousel-track');
             const btnPrev = document.getElementById('btn-prev');
             const btnNext = document.getElementById('btn-next');
