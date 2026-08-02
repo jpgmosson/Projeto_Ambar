@@ -47,80 +47,208 @@
             }
         }
     </script>
-    <style>
-        html,
-        body {
-            overflow-x: hidden;
-            width: 100%;
-            max-width: 100%;
-        }
-
-        ::-webkit-scrollbar:horizontal {
-            display: none;
-        }
-
-        .bg-hero-pattern {
-            background: url('img/fundo_degrade.png');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hide-scroll-bar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .hide-scroll-bar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="font-sans bg-ambar-cream text-ambar-darkest antialiased overflow-x-hidden w-full max-w-full">
 
-    <div class="fixed top-4 right-4 z-50">
-        <button id="lang-toggle" onclick="toggleLanguage()" class="bg-ambar-orange text-ambar-darkest font-bold py-2 px-4 rounded-full shadow-lg hover:bg-ambar-yellow transition-colors">
-            English
-        </button>
-    </div>
-
-    <section
-        class="relative w-full bg-hero-pattern min-h-[90vh] flex flex-col justify-center items-center text-center px-6 pt-20 pb-40">
-        <div class="max-w-4xl mx-auto relative z-10">
-            <img src="img/Logo_A_off.png" alt="Logo Portal Âmbar" class="h-24 w-auto mx-auto mb-8 object-contain">
-
-            <h1 class="font-serif text-4xl md:text-6xl text-ambar-cream font-bold leading-tight mb-6" data-i18n="hero_title">
-                Portal <span class="text-ambar-yellow italic"> Âmbar</span>
-            </h1>
-            <p class="text-lg md:text-xl text-ambar-cream/90 font-light max-w-2xl mx-auto mb-10" data-i18n="hero_desc_full">
-                Aqui no <span class="text-ambar-yellow italic font-serif font-bold">PORTAL ÂMBAR</span>,
-                você encontra um caminho. Um caminho para um corpo mais forte, mais flexível mais artístico, mais
-                criativo, mais potente. Um caminho para encontrar e desenvolver sua identidade com a precisão da técnica
-                e o poder da arte.
-            </p>
-
-            <a href="#checkout-kiwify" data-i18n="hero_cta"
-                class="inline-block bg-ambar-orange text-ambar-darkest font-bold text-lg md:text-xl px-10 py-5 rounded-full animate-cta-pulse transition-all hover:bg-ambar-yellow">
-                Quero começar
+    <!-- Sticky Top Navbar -->
+    <header
+        class="sticky top-0 z-50 w-full bg-ambar-darkest/95 backdrop-blur-md border-b border-ambar-orange/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
+            <!-- Logo & Brand Name -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="img/Logo_A_off.png" alt="Logo Portal Âmbar"
+                    class="h-9 w-auto object-contain transition-transform group-hover:scale-105">
+                <span class="font-serif font-bold text-xl md:text-2xl text-ambar-cream tracking-tight">
+                    Portal <span class="text-ambar-yellow italic">Âmbar</span>
+                </span>
             </a>
+
+            <!-- Navigation Links (Desktop) -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-ambar-cream/90">
+                <a href="#sobre" class="hover:text-ambar-yellow transition-colors" data-i18n="nav_about">Sobre</a>
+                <a href="#modalidades" class="hover:text-ambar-yellow transition-colors"
+                    data-i18n="nav_modalities">Modalidades</a>
+                <a href="#professoras" class="hover:text-ambar-yellow transition-colors"
+                    data-i18n="nav_teachers">Professoras</a>
+                <a href="#faq" class="hover:text-ambar-yellow transition-colors" data-i18n="nav_faq">Dúvidas</a>
+            </nav>
+
+            <!-- Actions (Lang & CTA) -->
+            <div class="flex items-center gap-3 sm:gap-4">
+                <button id="lang-toggle" onclick="toggleLanguage()"
+                    class="text-xs sm:text-sm font-semibold text-ambar-cream/80 hover:text-ambar-yellow transition-colors px-2 py-1">
+                    English
+                </button>
+                <a href="#pricing"
+                    class="bg-ambar-orange hover:bg-ambar-yellow text-ambar-darkest font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-full transition-all shadow-md hover:scale-105"
+                    data-i18n="nav_cta">
+                    Conheça os planos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Split Layout inspired by high conversion SaaS/EdTech) -->
+    <section
+        class="relative w-full bg-hero-pattern min-h-[85vh] flex flex-col justify-center px-6 pt-10 pb-28 lg:pb-36 overflow-hidden">
+        <div
+            class="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+            <!-- Left Column: Copy, Bullets, Price & CTA -->
+            <div class="lg:col-span-7 text-left">
+                <!-- Urgency Pill Badge -->
+                <div
+                    class="inline-flex items-center gap-2.5 bg-ambar-darkest/60 backdrop-blur-md border border-ambar-yellow/30 text-ambar-cream px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-6 shadow-lg">
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></span>
+                    <span data-i18n="hero_badge">Confiança se constrói em movimento</span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ambar-cream leading-[1.15] mb-6 tracking-tight"
+                    data-i18n="hero_title">
+                    Do básico ao avançado:<br>
+                    <span class="text-ambar-yellow italic font-serif">seu treino de pole completo, em casa.</span>
+                </h1>
+
+                <!-- Direct Bullets -->
+                <ul class="space-y-3.5 mb-8 text-ambar-cream/90 text-base sm:text-lg font-medium"
+                    data-i18n="hero_bullets">
+                    <li class="flex items-center gap-3">
+                        <div
+                            class="w-6 h-6 rounded-full bg-ambar-orange/20 border border-ambar-orange/30 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-ambar-yellow" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span>Aulas novas todo mês</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div
+                            class="w-6 h-6 rounded-full bg-ambar-orange/20 border border-ambar-orange/30 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-ambar-yellow" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span>Do básico ao avançado no seu ritmo</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div
+                            class="w-6 h-6 rounded-full bg-ambar-orange/20 border border-ambar-orange/30 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-ambar-yellow" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span>7 dias de garantia</span>
+                    </li>
+                </ul>
+
+                <!-- Price & CTA Box -->
+                <div
+                    class="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-8 bg-ambar-darkest/50 backdrop-blur-md p-6 rounded-3xl border border-ambar-yellow/20 max-w-2xl shadow-xl">
+                    <div>
+                        <p class="text-xs text-ambar-cream/70 uppercase tracking-widest font-semibold"
+                            data-i18n="hero_price_label">A partir de</p>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-ambar-yellow font-serif whitespace-nowrap"
+                            data-i18n="hero_price_val">12x R$ 72,29</p>
+                    </div>
+                    <a href="#pricing" data-i18n="hero_cta"
+                        class="w-full sm:w-auto text-center bg-ambar-orange hover:bg-ambar-yellow text-ambar-darkest font-bold text-lg px-8 py-4 rounded-full animate-cta-pulse transition-all shadow-xl uppercase tracking-wide">
+                        Quero começar agora
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Card Preview -->
+            <div class="lg:col-span-5 relative mt-6 lg:mt-0">
+                <!-- Floating status pill -->
+                <div
+                    class="absolute -top-4 right-4 sm:top-2 sm:right-2 z-20 bg-white/95 text-ambar-darkest px-4 py-2 rounded-full shadow-2xl text-xs sm:text-sm font-bold flex items-center gap-2 border border-ambar-orange/40">
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-ping"></span>
+                    <span>🟢 Acesso Imediato ao Portal</span>
+                </div>
+
+                <!-- Main Card -->
+                <div
+                    class="relative bg-gradient-to-b from-ambar-darkred/90 to-ambar-darkest/95 rounded-3xl p-3 border border-ambar-yellow/30 shadow-2xl overflow-hidden backdrop-blur-xl">
+                    <div class="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                        <img src="img/IMG_1432.JPEG" alt="Treino Portal Âmbar"
+                            class="w-full h-full object-cover scale-[2] origin-[90%_60%] object-[center_20%]">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-ambar-darkest via-ambar-darkest/20 to-transparent">
+                        </div>
+
+                        <!-- Teacher Overlay Info -->
+                        <div
+                            class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl text-ambar-darkest shadow-xl border border-white/40">
+                            <div class="flex items-center justify-between gap-2 mb-2.5">
+                                <div class="flex items-center gap-2.5">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-ambar-darkest p-1.5 flex items-center justify-center shadow border border-ambar-orange/30 flex-shrink-0">
+                                        <img src="img/Logo_A_off.png" alt="Logo Portal Âmbar"
+                                            class="w-full h-full object-contain">
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm text-ambar-darkest leading-tight">Portal Âmbar</p>
+                                        <p class="text-xs text-amber-900 font-medium">Treino no seu ritmo, no seu tempo
+                                            e em
+                                            qualquer lugar</p>
+                                    </div>
+                                </div>
+                                <a href="https://www.instagram.com/ambar.portal/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1.5 bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 text-white font-bold text-xs px-3 py-1.5 rounded-full shadow hover:scale-105 transition-all flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                    </svg>
+                                    <span>@ambar.portal</span>
+                                </a>
+                            </div>
+
+                            <div
+                                class="grid grid-cols-3 gap-2 text-center pt-2.5 border-t border-ambar-orange/20 text-xs font-semibold text-ambar-darkred">
+                                <div>
+                                    <span class="block text-sm font-bold text-ambar-darkest">10+</span> Módulos
+                                </div>
+                                <div class="border-x border-ambar-orange/20">
+                                    <span class="block text-sm font-bold text-ambar-darkest">60+</span> Aulas
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-ambar-darkest">7 Dias</span> Garantia
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
+        <!-- Wave divider at bottom -->
         <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
-            <svg class="relative block w-full h-[60px] md:h-[100px]" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <svg class="relative block w-full h-[50px] md:h-[80px] transform scale-105 -mb-[1px]"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
                 <path
-                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
-                    class="fill-ambar-cream"></path>
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                    class="fill-white"></path>
             </svg>
         </div>
     </section>
 
-    <section class="relative w-full pt-20 pb-40">
+    <section id="sobre" class="relative w-full pt-20 pb-40 bg-white">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16 relative z-10">
             <div class="md:w-1/2 relative">
                 <div class="w-full aspect-square bg-ambar-lightorange rounded-full overflow-hidden relative shadow-2xl">
-                    <img src="img/IMG_1432.JPEG" alt="Movimento fluido de pole dance"
-                        class="w-full h-full object-cover scale-[1.8] origin-[100%_35%]">
+                    <img src="img/pernas2.jpeg" alt="Movimento fluido de pole dance" class="w-full h-full object-cover"
+                        style="transform: scale(1.6) translateY(7%);">
                 </div>
                 <div
                     class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-gradient-to-tr from-ambar-orange to-ambar-yellow blur-xl opacity-60 pointer-events-none">
@@ -128,62 +256,210 @@
             </div>
 
             <div class="md:w-1/2">
-                <h2 class="font-serif text-3xl md:text-5xl font-bold text-ambar-darkred mb-6" data-i18n="sec1_title"> Acreditamos no corpo como
-                    potencia. <br>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-ambar-darkred mb-6" data-i18n="sec1_title">
+                    Acreditamos no corpo como
+                    potência. <br>
                     Na dança como expressão. <br>
                     Na criatividade como caminho</h2>
                 <p class="text-lg mb-6 leading-relaxed" data-i18n="sec1_p1">
-                    O <strong>Portal Âmbar</strong> foi criado para você que deseja ampliar seus treinos e estudos para
-                    além das salas do studio. Para quem deseja treinar com liberdade e autonomia. Através de uma
-                    metodologia testada e consistente, desenvolvida pela Mariana Souza, professora do portal, nós te
-                    guiaremos pelo caminho artístico de forma progressiva, com módulos básicos, intermediários e
-                    avançados, para que você possa sempre consolidar suas bases seguir se desenvolvendo.
-                <p class="text-lg mb-8 leading-relaxed" data-i18n="sec1_p2">
-                    Aqui, você aprende no seu ritmo, a qualquer hora, com aulas completas de fortalecimento,
-                    flexibilidade, coreografias, exercícios específicos e muito mais. Todos os módulos foram pensados
-                    para que você amplie seu repertório, prepare seu corpo e alimente sua criatividade.
+                    O <strong>Portal Âmbar</strong> é uma plataforma de aulas online onde você encontra um caminho para
+                    um corpo mais forte, mais flexível, mais artístico, mais criativo, mais potente. Um caminho para
+                    encontrar e desenvolver sua identidade por meio do equilíbrio entre a precisão da técnica e o poder
+                    da arte. Aqui, você encontrará aulas curtas e práticas com o objetivo de ampliar seu repertório,
+                    preparar seu corpo e alimentar sua criatividade com módulos progressivos que te direcionam com
+                    clareza e segurança para treinar sozinha e evoluir de verdade.
+                </p>
+                <p class="text-lg mb-6 leading-relaxed" data-i18n="sec1_p2">
+                    O <strong>Portal Âmbar</strong> foi criado para quem deseja:
                 </p>
                 <ul class="space-y-4 font-semibold text-ambar-red">
                     <li class="flex items-center gap-3" data-i18n="sec1_li1">
-                        <svg class="w-6 h-6 text-ambar-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
-                        Do básico ao avançado no seu ritmo
+                        <span>ampliar seus treinos e estudos para além das salas de aula</span>
                     </li>
                     <li class="flex items-center gap-3" data-i18n="sec1_li2">
-                        <svg class="w-6 h-6 text-ambar-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
-                        Aulas novas todo mês
+                        <span>treinar com mais liberdade e autonomia</span>
                     </li>
                     <li class="flex items-center gap-3" data-i18n="sec1_li3">
-                        <svg class="w-6 h-6 text-ambar-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
-                        Aulas bônus com convidados especiais
+                        <span>ampliar seu repertório artístico</span>
                     </li>
+                    <li class="flex items-center gap-3" data-i18n="sec1_li4">
+                        <svg class="w-6 h-6 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span>desenvolver sua força e flexibilidade em casa</span>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
-            <svg class="relative block w-full h-[60px] md:h-[100px] transform scale-x-[-1]"
+            <svg class="relative block w-full h-[60px] md:h-[100px] transform scale-105 scale-x-[-1] -mb-[1px]"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
                 <path
                     d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
-                    class="fill-ambar-yellow opacity-20"></path>
+                    class="fill-ambar-cream"></path>
             </svg>
         </div>
     </section>
 
-    <section class="relative w-full pt-20 pb-40 bg-ambar-yellow/20">
+    <!-- SECTION: Como Funciona -->
+    <section id="como-funciona" class="relative w-full pt-20 pb-40 bg-ambar-cream">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Header -->
+            <div class="mb-14 text-left max-w-3xl">
+                <span
+                    class="text-xs sm:text-sm font-bold uppercase tracking-widest text-ambar-orange bg-ambar-orange/10 px-4 py-1.5 rounded-full inline-block mb-4 border border-ambar-orange/20"
+                    data-i18n="how_badge">
+                    Como Funciona
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-ambar-darkest mb-4 leading-tight"
+                    data-i18n="how_title">
+                    Sua jornada no portal em <span
+                        class="text-ambar-darkred italic underline decoration-ambar-orange/60 underline-offset-8">três
+                        passos</span> simples.
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg" data-i18n="how_subtitle">
+                    Do primeiro acesso até a sua evolução constante.
+                </p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 01 -->
+                <div
+                    class="bg-white p-8 sm:p-10 rounded-[32px] shadow-xl border border-ambar-orange/15 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-ambar-orange/10 to-transparent rounded-bl-full pointer-events-none">
+                    </div>
+                    <div>
+                        <span
+                            class="block text-4xl sm:text-5xl font-serif italic font-bold text-ambar-orange/70 mb-4">01</span>
+                        <div
+                            class="w-12 h-12 bg-ambar-cream rounded-2xl flex items-center justify-center text-ambar-darkred mb-6 border border-ambar-orange/20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-3" data-i18n="how_step1_t">
+                            Assine em 2 minutos
+                        </h3>
+                        <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6" data-i18n="how_step1_p">
+                            Pix ou cartão em até 12x. Seu acesso é liberado imediatamente após a confirmação.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+                        <span
+                            class="inline-flex items-center gap-1.5 text-xs font-bold text-ambar-darkred bg-ambar-orange/15 px-3.5 py-2 rounded-full">
+                            ⚡ Acesso Imediato
+                        </span>
+                        <a href="#pricing" data-i18n="how_step1_btn"
+                            class="inline-flex items-center justify-center bg-ambar-orange hover:bg-ambar-yellow text-ambar-darkest font-bold text-xs sm:text-sm px-4 py-2 rounded-full transition-all shadow hover:scale-105 uppercase tracking-wide">
+                            Assinar agora →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 02 -->
+                <div
+                    class="bg-white p-8 sm:p-10 rounded-[32px] shadow-xl border border-ambar-orange/15 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-ambar-orange/10 to-transparent rounded-bl-full pointer-events-none">
+                    </div>
+                    <div>
+                        <span
+                            class="block text-4xl sm:text-5xl font-serif italic font-bold text-ambar-orange/70 mb-4">02</span>
+                        <div
+                            class="w-12 h-12 bg-ambar-cream rounded-2xl flex items-center justify-center text-ambar-darkred mb-6 border border-ambar-orange/20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-3" data-i18n="how_step2_t">
+                            Escolha o que treinar
+                        </h3>
+                        <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6" data-i18n="how_step2_p">
+                            Comece pelo aquecimento e depois escolha seu objetivo - temos um guia completo com combos de
+                            treinos.
+                        </p>
+                    </div>
+                    <div>
+                        <span
+                            class="inline-flex items-center gap-1.5 text-xs font-bold text-ambar-darkred bg-ambar-orange/15 px-3 py-1.5 rounded-full">
+                            📄 Materiais em Vídeo e PDF
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Step 03 -->
+                <div
+                    class="bg-white p-8 sm:p-10 rounded-[32px] shadow-xl border border-ambar-orange/15 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-ambar-orange/10 to-transparent rounded-bl-full pointer-events-none">
+                    </div>
+                    <div>
+                        <span
+                            class="block text-4xl sm:text-5xl font-serif italic font-bold text-ambar-orange/70 mb-4">03</span>
+                        <div
+                            class="w-12 h-12 bg-ambar-cream rounded-2xl flex items-center justify-center text-ambar-darkred mb-6 border border-ambar-orange/20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-3" data-i18n="how_step3_t">
+                            Evolua no seu ritmo
+                        </h3>
+                        <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6" data-i18n="how_step3_p">
+                            Aproveite 1 ano de acesso completo, aulas novas todo mês e suporte direto no WhatsApp.
+                        </p>
+                    </div>
+                    <div>
+                        <span
+                            class="inline-flex items-center gap-1.5 text-xs font-bold text-ambar-darkred bg-ambar-orange/15 px-3 py-1.5 rounded-full">
+                            💬 Suporte no WhatsApp
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave divider transitioning into Section 2 (bg-white) -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="relative block w-full h-[60px] md:h-[100px] transform scale-105 -mb-[1px]"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                    class="fill-white"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="relative w-full pt-20 pb-40 bg-white">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                <h1 class="font-serif text-4xl font-bold text-ambar-darkest mb-4" data-i18n="sec2_title">Tudo que você vai conquistar com o
+                <h1 class="font-serif text-4xl font-bold text-ambar-darkest mb-4" data-i18n="sec2_title">Tudo que você
+                    vai conquistar com o
                     Portal Âmbar</h1>
             </div>
 
@@ -203,8 +479,8 @@
                         </svg>
                     </div>
                     <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c1_t">Força</h3>
-                    <p class="text-gray-600" data-i18n="sec2_c1_p">Sequencias de fortalecimento com e sem barra para preparar seu corpo de
-                        forma segura</p>
+                    <p class="text-gray-600" data-i18n="sec2_c1_p">Sequências de fortalecimento com e sem barra para
+                        preparar seu corpo de forma segura.</p>
                 </div>
 
                 <div
@@ -222,8 +498,8 @@
                         </svg>
                     </div>
                     <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c2_t">Flexibilidade</h3>
-                    <p class="text-gray-600" data-i18n="sec2_c2_p">Aulas completas de flexibilidade parar melhorar seu alongamento e
-                        mobilidade</p>
+                    <p class="text-gray-600" data-i18n="sec2_c2_p">Aulas completas de flexibilidade para melhorar seu
+                        alongamento e mobilidade.</p>
                 </div>
 
                 <div
@@ -236,8 +512,8 @@
                         </svg>
                     </div>
                     <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c3_t">Coreografias</h3>
-                    <p class="text-gray-600" data-i18n="sec2_c3_p">Coreografias completas com e sem salto para ampliar seu repertorio
-                        artístico</p>
+                    <p class="text-gray-600" data-i18n="sec2_c3_p">Coreografias completas com e sem salto para ampliar
+                        seu repertório artístico.</p>
                 </div>
 
                 <div
@@ -249,9 +525,9 @@
                                 d="M246 144a6 6 0 0 1-12 0a98.11 98.11 0 0 0-98-98a90.1 90.1 0 0 0-90 90a82.1 82.1 0 0 0 82 82a74.09 74.09 0 0 0 74-74a66.08 66.08 0 0 0-66-66a58.07 58.07 0 0 0-58 58a50.06 50.06 0 0 0 50 50a42 42 0 0 0 42-42a34 34 0 0 0-34-34a26 26 0 0 0-26 26a18 18 0 0 0 18 18a10 10 0 0 0 10-10a2 2 0 0 0-2-2a6 6 0 0 1 0-12a14 14 0 0 1 14 14a22 22 0 0 1-22 22a30 30 0 0 1-30-30a38 38 0 0 1 38-38a46.06 46.06 0 0 1 46 46a54.06 54.06 0 0 1-54 54a62.07 62.07 0 0 1-62-62a70.08 70.08 0 0 1 70-70a78.09 78.09 0 0 1 78 78a86.1 86.1 0 0 1-86 86a94.11 94.11 0 0 1-94-94A102.12 102.12 0 0 1 136 34a110.13 110.13 0 0 1 110 110" />
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c4_t">Sequências e transições</h3>
-                    <p class="text-gray-600" data-i18n="sec2_c4_p">Sequencias de combos na barra, sequências exotic, tricks e
-                        transições com e sem salto, aulas de parada de mão e floowork</p>
+                    <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c4_t">Sequências e Transições</h3>
+                    <p class="text-gray-600" data-i18n="sec2_c4_p">Sequências de combos na barra, sequências de exotic,
+                        tricks e transições com e sem salto, aulas de parada de mão e floorwork.</p>
                 </div>
 
                 <div
@@ -265,8 +541,8 @@
                         </svg>
                     </div>
                     <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c5_t">Comunidade</h3>
-                    <p class="text-gray-600" data-i18n="sec2_c5_p">Fazer parte de uma comunidade acolhedora que evolui junto, respeita seu
-                        tempo e celebra cada passo da sua jornada</p>
+                    <p class="text-gray-600" data-i18n="sec2_c5_p">Fazer parte de uma comunidade acolhedora que evolui
+                        junto, respeita seu tempo e celebra cada passo da sua jornada.</p>
                 </div>
 
                 <div
@@ -280,26 +556,34 @@
                         </svg>
                     </div>
                     <h3 class="font-serif text-2xl font-bold mb-4" data-i18n="sec2_c6_t">Autoestima</h3>
-                    <p class="text-gray-600" data-i18n="sec2_c6_p">Sentir orgulho do seu corpo e do que ele é capaz de fazer ao mesmo tempo
-                        que desenvolve sua identidade artística sem pressão ou julgamento</p>
+                    <p class="text-gray-600" data-i18n="sec2_c6_p">Sentir orgulho do seu corpo e do que ele é capaz de
+                        fazer, ao mesmo tempo em que desenvolve sua identidade artística sem pressão ou julgamento.</p>
                 </div>
+            </div>
+
+            <div class="mt-14 text-center">
+                <a href="#pricing" data-i18n="sec2_cta"
+                    class="inline-block bg-ambar-orange hover:bg-ambar-yellow text-ambar-darkest font-bold text-base sm:text-lg px-8 py-4 rounded-full animate-cta-pulse transition-all shadow-xl uppercase tracking-wide">
+                    Quero começar agora
+                </a>
             </div>
         </div>
 
         <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
-            <svg class="relative block w-full h-[60px] md:h-[100px]" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <svg class="relative block w-full h-[60px] md:h-[100px] transform scale-105 -mb-[1px]"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
                 <path
                     d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
                     class="fill-ambar-cream"></path>
             </svg>
         </div>
     </section>
-    <section class="relative w-full pt-20 pb-40 bg-ambar-cream overflow-hidden">
+
+    <section id="modalidades" class="relative w-full pt-20 pb-40 bg-ambar-cream overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end relative z-10">
             <div>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_title">Um Portal. <span
-                        class="text-ambar-orange">Várias Modalidades.</span></h2>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_title">Um
+                    Portal. <span class="text-ambar-orange">Várias Modalidades.</span></h2>
                 <p class="text-lg text-ambar-red" data-i18n="sec3_subtitle">Descubra o que te movimenta.</p>
             </div>
 
@@ -329,25 +613,29 @@
                 class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
                 <div
                     class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
-                    <img src="img/Aquecimento sem texto.jpg"
+                    <img src="img/aquecimentosN.jpeg"
                         class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
                         alt="">
-                    <img src="img/Aquecimento sem texto.jpg" alt="Aquecimentos"
-                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
+                    <img src="img/aquecimentosN.jpeg" alt="Aquecimentos"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105"
+                        style="transform: scale(1.4) translateX(8%);">
                     <div
                         class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card1_t">Aquecimentos Gerais e Específicos</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card1_t">Aquecimentos
+                            Gerais e Específicos</h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card1_t_sub">Aquecimentos Gerais e Específicos
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card1_t_sub">
+                        Aquecimentos Gerais e Específicos
                     </h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card1_p">Aqui você encontra aulas completas
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card1_p">Aqui você
+                        encontra aulas completas
                         para preparar o seu corpo para qualquer uma de nossas práticas.</p>
                 </div>
             </div>
@@ -356,27 +644,30 @@
                 class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
                 <div
                     class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
-                    <img src="img/Fortalecimento sem texto.jpg"
+                    <img src="img/fortalecimentoN.jpeg"
                         class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
                         alt="">
-                    <img src="img/Fortalecimento sem texto.jpg" alt="Fortalecimentos"
-                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
+                    <img src="img/fortalecimentoN.jpeg" alt="Fortalecimentos"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105"
+                        style="transform: scale(1.4) translateX(-8%) translateY(-10%);">
                     <div
                         class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card2_t">Fortalecimentos com e sem barra</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card2_t">Fortalecimentos
+                            com e sem barra</h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card2_t_sub">Fortalecimentos com e sem barra
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card2_t_sub">
+                        Fortalecimentos com e sem barra
                     </h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card2_p">Aqui você encontra aulas para
-                        fortalecer seu corpo de forma livre e aulas com exercícios realizados na Barra que serão
-                        funcionais para o desenvolvimento da sua técnica e força no pole.</p>
+                    <p class="text-gray-600 text-sm leading-relaxed" data-i18n="sec3_card2_p">Aqui você encontra aulas
+                        para fortalecer seu corpo de forma livre e com o auxílio da barra, direcionadas para o
+                        desenvolvimento da sua técnica e força no pole.</p>
                 </div>
             </div>
 
@@ -384,24 +675,28 @@
                 class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
                 <div
                     class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
-                    <img src="img/Flex sem texto.jpg"
+                    <img src="img/aquecimentoN.jpeg"
                         class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
                         alt="">
-                    <img src="img/Flex sem texto.jpg" alt="Flexibilidade"
-                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
+                    <img src="img/aquecimentoN.jpeg" alt="Flexibilidade"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105"
+                        style="transform: scale(1.5) translateX(4%);">
                     <div
                         class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card3_t">Flexibilidade</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card3_t">Flexibilidade
+                        </h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card3_t_sub">Flexibilidade</h3>
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card3_t_sub">
+                        Flexibilidade</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card3_p">Neste módulo você encontra aulas que
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card3_p">Neste módulo
+                        você encontra aulas que
                         irão te ajudar a desenvolver sua mobilidade e alongamento. Assim como treino de figuras de
                         flexibilidade específicas.</p>
                 </div>
@@ -411,25 +706,29 @@
                 class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
                 <div
                     class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
-                    <img src="img/Sequencias sem texto.jpg"
+                    <img src="img/SequenciasN.jpeg"
                         class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
                         alt="">
-                    <img src="img/Sequencias sem texto.jpg" alt="Sequências"
-                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
+                    <img src="img/SequenciasN.jpeg" alt="Sequências"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105"
+                        style="transform: scale(1.3) translateX(-8%);">
                     <div
                         class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card4_t">Sequências / Transições</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card4_t">Combos e
+                            Transições</h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card4_t_sub">Sequências / Transições</h3>
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card4_t_sub">
+                        Combos e Transições</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card4_p">Aqui você encontra nossas pequenas
-                        sequências e combos com e sem salto que podem acrescentar e ajudar a destravar sua criatividade
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card4_p">Aqui você
+                        encontra sequências e combos com e sem salto que para acrescentar e ajudar a destravar sua
+                        criatividade
                         no contato com a barra.</p>
                 </div>
             </div>
@@ -438,27 +737,31 @@
                 class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
                 <div
                     class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
-                    <img src="img/Exotic sem texto.jpg"
+                    <img src="img/SequenciasExoticN.jpeg"
                         class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
                         alt="">
-                    <img src="img/Exotic sem texto.jpg" alt="Sequências Exotic"
-                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
+                    <img src="img/SequenciasExoticN.jpeg" alt="Sequências Exotic"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105"
+                        style="transform: scale(1.4) translateX(-8%);">
                     <div
                         class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card5_t">Sequências Exotic</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card5_t">Sequências
+                            Exotic</h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card5_t_sub">Sequências Exotic</h3>
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card5_t_sub">
+                        Sequências Exotic</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card5_p">Aqui temos diversas sequências exotic
-                        de
-                        técnicas específicas como legwork’s, caminhadas, edge works, e muito mais. Que irão te auxiliar
-                        no desenvolvimento técnico, além de treinar musicalidade e expressão corporal.</p>
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card5_p">
+                        Sequências de exotic
+                        voltadas a
+                        técnicas específicas como legworks, caminhadas, edgeworks, com o objetivo de evoluir sua
+                        técnica, musicalidade e expressão corporal.</p>
                 </div>
             </div>
 
@@ -466,11 +769,12 @@
                 class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
                 <div
                     class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
-                    <img src="img/Tricks sem texto.jpg"
+                    <img src="img/TrickN.jpeg"
                         class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
                         alt="">
-                    <img src="img/Tricks sem texto.jpg" alt="Tricks"
-                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
+                    <img src="img/TrickN.jpeg" alt="Tricks"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105"
+                        style="transform: scale(1.2) translateX(-8%);">
                     <div
                         class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
@@ -481,10 +785,11 @@
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card6_t_sub">Tricks</h3>
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card6_t_sub">
+                        Tricks</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card6_p">Na nossa seção de tricks você encontra
-                        exercícios e treinos para desenvolver suas acrobacias de forma técnica e criativa como quedas,
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card6_p">
+                        Treinos para desenvolver suas acrobacias de forma técnica e criativa com exercícios de quedas,
                         flips, cama de gato, parada de mão e muito mais.</p>
                 </div>
             </div>
@@ -493,25 +798,28 @@
                 class="carousel-card snap-start shrink-0 h-[400px] rounded-[30px] overflow-hidden relative cursor-pointer shadow-lg transition-all duration-500 ease-in-out w-[280px] md:w-[320px] bg-white flex flex-col md:flex-row border border-transparent hover:border-ambar-orange/30">
                 <div
                     class="image-container w-[280px] md:w-[320px] h-[400px] md:h-full shrink-0 relative group overflow-hidden transition-all duration-500 bg-ambar-darkest">
-                    <img src="img/Coreo sem texto.jpg"
+                    <img src="img/CoreoN.jpeg"
                         class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 blur-xl scale-110 img-blur pointer-events-none"
                         alt="">
-                    <img src="img/Coreo sem texto.jpg" alt="Coreografias"
-                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105">
+                    <img src="img/CoreoN.jpeg" alt="Coreografias"
+                        class="relative z-10 w-full h-full object-cover transition-all duration-500 img-main group-hover:scale-105"
+                        style="transform: scale(1.4);">
                     <div
                         class="absolute inset-0 z-20 bg-gradient-to-t from-ambar-darkest/90 via-ambar-darkest/40 to-transparent gradient-overlay transition-opacity duration-500 pointer-events-none">
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full p-6 text-left z-30 transition-all duration-500 card-title pointer-events-none">
-                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card7_t">Coreografias</h3>
+                        <h3 class="text-white font-bold text-xl leading-tight" data-i18n="sec3_card7_t">Coreografias
+                        </h3>
                     </div>
                 </div>
                 <div
                     class="w-full md:w-[350px] shrink-0 p-8 flex flex-col justify-center opacity-0 transition-opacity duration-500 card-content hidden md:flex">
-                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card7_t_sub">Coreografias</h3>
+                    <h3 class="font-serif text-2xl font-bold text-ambar-darkest mb-4" data-i18n="sec3_card7_t_sub">
+                        Coreografias</h3>
                     <div class="w-12 h-1 bg-ambar-orange mb-4 rounded-full"></div>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card7_p">Aqui você encontra nossas coreografias
-                        com e sem salto. Cheias de musicalidade e criatividade, com a assinatura de cada professora para
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-i18n="sec3_card7_p">Coreografias
+                        com e sem salto, cheias de musicalidade e criatividade, com a assinatura de cada professora para
                         que você possa treinar e desenvolver sua expressividade.</p>
                 </div>
             </div>
@@ -522,14 +830,22 @@
             <div class="h-1 w-full bg-gray-200 rounded-full overflow-hidden">
                 <div class="h-full bg-ambar-red w-1/3 rounded-full" id="carousel-progress"></div>
             </div>
-            <div class="text-right mt-2 md:hidden">
-                <span class="text-sm font-semibold text-ambar-orange" data-i18n="sec3_swipe">Deslize para ver mais ➔</span>
-            </div>
         </div>
+
+        <!-- Closing CTA for Modalidades section -->
+        <div
+            class="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 bg-ambar-cream/60 border border-ambar-orange/20 p-6 sm:p-8 rounded-3xl max-w-2xl mx-auto shadow-lg relative z-10">
+            <span class="text-lg sm:text-xl font-bold text-ambar-darkest" data-i18n="sec3_closing_text">
+                Tudo isso por <span class="text-ambar-darkred font-extrabold text-2xl">12x R$ 72,29</span>
+            </span>
+            <a href="#pricing" data-i18n="sec3_closing_btn"
+                class="bg-ambar-orange hover:bg-ambar-yellow text-ambar-darkest font-bold text-sm sm:text-base px-6 py-3.5 rounded-full transition-all shadow-md hover:scale-105 uppercase tracking-wide">
+                Quero me inscrever →
+            </a>
         </div>
 
         <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
-            <svg class="relative block w-full h-[60px] md:h-[100px] transform scale-x-[-1]"
+            <svg class="relative block w-full h-[60px] md:h-[100px] transform scale-105 scale-x-[-1] -mb-[1px]"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
                 <path
                     d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
@@ -538,12 +854,14 @@
         </div>
     </section>
 
-    <section class="relative w-full pt-20 pb-40 bg-white">
+    <section id="professoras" class="relative w-full pt-20 pb-40 bg-white">
         <div class="max-w-5xl mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-4" data-i18n="sec4_title">Conheça nossas professoras
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-4" data-i18n="sec4_title">
+                    Conheça nossas professoras
                 </h2>
-                <p class="text-lg text-ambar-darkred" data-i18n="sec4_subtitle">Profissionais premiadas e apaixonadas pela
+                <p class="text-lg text-ambar-darkred" data-i18n="sec4_subtitle">Profissionais premiadas e apaixonadas
+                    pela
                     transformação através do pole dance.</p>
             </div>
 
@@ -555,32 +873,65 @@
                         <img src="img/IMG_1418.JPEG" alt="Mariana Mosson"
                             class="w-full h-full object-cover rounded-full border-4 border-white">
                     </div>
-                    <h3 class="font-serif text-3xl font-bold text-ambar-darkest mb-2">Mariana Mosson</h3>
-                    <p class="text-ambar-orange font-semibold mb-4 uppercase tracking-wider text-sm" data-i18n="sec4_t1_role">Fundadora e
+                    <h3 class="font-serif text-3xl font-bold text-ambar-darkest mb-1">Mariana Mosson</h3>
+                    <p class="text-ambar-orange font-semibold mb-3 uppercase tracking-wider text-sm"
+                        data-i18n="sec4_t1_role">Fundadora e
                         idelizadora do Portal
                         Âmbar</p>
 
+                    <!-- Stylized Instagram Badge -->
+                    <a href="https://www.instagram.com/marimosson/" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 text-white font-bold text-xs px-4 py-1.5 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 mb-4">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                        <span>@marimosson</span>
+                    </a>
+
                     <p class="text-gray-600 mb-4 leading-relaxed" data-i18n="sec4_t1_desc">
-                        Praticante de pole dance há 9 anos, Mariana nunca havia feito outras danças ou ginástica antes
-                        de encontrar o pole. Desenvolveu toda a sua força, flexibilidade e lado artístico através da
+                        Praticante de pole dance há 9 anos. Desenvolveu toda a sua força, flexibilidade e lado artístico
+                        através da
                         prática.
                     </p>
+
+                    <!-- Highlights Badges -->
+                    <div class="flex flex-wrap justify-center gap-2 mb-4">
+                        <span
+                            class="inline-flex items-center gap-1.5 text-xs font-bold text-ambar-darkred bg-ambar-orange/15 border border-ambar-orange/30 px-3.5 py-1.5 rounded-full shadow-sm"
+                            data-i18n="mosson_b1">
+                            🏆 Campeã Overall Forte Pole Champ 2026
+                        </span>
+                        <span
+                            class="inline-flex items-center gap-1.5 text-xs font-bold text-ambar-darkred bg-ambar-orange/15 border border-ambar-orange/30 px-3.5 py-1.5 rounded-full shadow-sm"
+                            data-i18n="mosson_b2">
+                            🏆 Campeã Latino America Pole Up Argentina 2026
+                        </span>
+                    </div>
 
                     <div id="curriculo-mosson" class="overflow-hidden transition-all duration-500 max-h-0 opacity-0">
                         <ul
                             class="text-left text-sm text-gray-600 space-y-2 mt-4 bg-ambar-cream/50 p-6 rounded-2xl border border-ambar-orange/20">
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c1">Campeã Pole Art Brazil 2024</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c2">Campeã Curitiba Pole Arte Heelografy 2024</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c3">Campeã Exotic Generation 2024</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c4">Campeã Melhores Tricks - Exotic Generation 2024</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c5">Finalista Mundial Itália - Exotic Finals 2025</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c6">Co-produtora do Festival Sexy September</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c7">Campeã Overall Forte Pole Champ 2026</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c8">⁠Campeã Latino America Pole Up Argentina 2026</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c1">Campeã
+                                    Pole Art Brazil 2024</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c2">Campeã
+                                    Curitiba Pole Arte Heelografy 2024</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c3">Campeã
+                                    Exotic Generation 2024</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c4">Campeã
+                                    Melhores Tricks - Exotic Generation 2024</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span
+                                    data-i18n="mosson_c5">Finalista Mundial Itália - Exotic Finals 2025</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span
+                                    data-i18n="mosson_c6">Co-produtora do Festival Sexy September</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c7">Campeã
+                                    Overall Forte Pole Champ 2026</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="mosson_c8">Campeã
+                                    Latino America Pole Up Argentina 2026</span></li>
 
                         </ul>
-                        <p
-                            class="mt-4 italic text-sm font-serif text-ambar-darkest font-semibold border-l-4 border-ambar-orange pl-4 text-left" data-i18n="sec4_t1_quote">
+                        <p class="mt-4 italic text-sm font-serif text-ambar-darkest font-semibold border-l-4 border-ambar-orange pl-4 text-left"
+                            data-i18n="sec4_t1_quote">
                             "Acredito que todo corpo é capaz de aprender, se desenvolver e se transformar em qualquer
                             idade!"
                         </p>
@@ -603,32 +954,71 @@
                         <img src="img/IMG_2442.JPG.jpeg" alt="Mariana Souza"
                             class="w-full h-full object-cover object-[center_80%] rounded-full border-4 border-white">
                     </div>
-                    <h3 class="font-serif text-3xl font-bold text-ambar-darkest mb-2">Mariana Souza</h3>
-                    <p class="text-ambar-orange font-semibold mb-4 uppercase tracking-wider text-sm" data-i18n="sec4_t2_role">Co-fundadora do
+                    <h3 class="font-serif text-3xl font-bold text-ambar-darkest mb-1">Mariana Souza</h3>
+                    <p class="text-ambar-orange font-semibold mb-3 uppercase tracking-wider text-sm"
+                        data-i18n="sec4_t2_role">Co-fundadora do
                         Portal
                         Âmbar</p>
 
+                    <!-- Stylized Instagram Badge -->
+                    <a href="https://www.instagram.com/marianasouza.art/" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 text-white font-bold text-xs px-4 py-1.5 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 mb-4">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                        <span>@marianasouza.art</span>
+                    </a>
+
                     <p class="text-gray-600 mb-4 leading-relaxed" data-i18n="sec4_t2_desc">
-                        Praticante de Pole Dance há 14 anos, é também Co-fundadora do Studio Gravitarte Dança e aéreos
-                        em Curitiba-PR. Coleciona diversos títulos e indicações importantes no cenário nacional e
-                        internacional.
+                        Praticante de Pole Dance há 14 anos, Co-fundadora do Studio Gravitarte Dança e Aéreos
+                        em Curitiba-PR.
                     </p>
+
+                    <!-- Highlights Badges -->
+                    <div class="flex flex-wrap justify-center gap-2 mb-4">
+                        <span
+                            class="inline-flex items-center gap-1.5 text-xs font-bold text-ambar-darkred bg-ambar-orange/15 border border-ambar-orange/30 px-3.5 py-1.5 rounded-full shadow-sm"
+                            data-i18n="souza_b1">
+                            🏆 Bicampeã Pro Pole Art Brazil 2022/2023
+                        </span>
+                        <span
+                            class="inline-flex items-center gap-1.5 text-xs font-bold text-ambar-darkred bg-ambar-orange/15 border border-ambar-orange/30 px-3.5 py-1.5 rounded-full shadow-sm"
+                            data-i18n="souza_b2">
+                            🏆 Campeã High Heels Elite - Pole Up 2026
+                        </span>
+                    </div>
 
                     <div id="curriculo-souza" class="overflow-hidden transition-all duration-500 max-h-0 opacity-0">
                         <ul
                             class="text-left text-sm text-gray-600 space-y-2 mt-4 bg-ambar-cream/50 p-6 rounded-2xl border border-ambar-orange/20">
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c1">Bicampeã Pro Pole Art Brazil 2022/2023</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c2">Over All Curitiba Pole Arte 2022</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c3">Campeã Exotic Generation BR 2024 Flow</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c4">Campeã Melhor Coreografia Exotic Generation BR</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c5">Campeã Melhor Leg Works Exotic Generation BR</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c6">Finalista Mundial Itália - Exotic Finals 2024</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c7">Indicação Melhor Bailarina - Dance Joaçaba 2024</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c8">Indicação Melhor Bailarina - Festival de Dança Timbó 2025</span></li>
-                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c9">Idealizadora e produtora do Festival Sexy September</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c1">Bicampeã
+                                    Pro Pole Art Brazil 2022/2023</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c2">Over All
+                                    Curitiba Pole Arte 2022</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c3">Campeã
+                                    Exotic Generation BR 2024 Flow</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c4">Campeã
+                                    Melhor Coreografia Exotic Generation BR</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c5">Campeã
+                                    Melhor Leg Works Exotic Generation BR</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c6">Finalista
+                                    Mundial Itália - Exotic Finals 2024</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c7">Indicação
+                                    Melhor Bailarina - Dance Joaçaba 2024</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c8">Indicação
+                                    Melhor Bailarina - Festival de Dança Timbó 2025</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span
+                                    data-i18n="souza_c9">Idealizadora e produtora do Festival Sexy September</span></li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c10">Campeã
+                                    Solo Feminino
+                                    Dança Contemporânea - Festival de Dança de Ponta Grossa 2026</span>
+                            </li>
+                            <li><span class="font-bold text-ambar-darkred">•</span> <span data-i18n="souza_c13">Campeã
+                                    High Heels Elite - Pole Up 2026</span></li>
                         </ul>
-                        <p
-                            class="mt-4 italic text-sm font-serif text-ambar-darkest font-semibold border-l-4 border-ambar-orange pl-4 text-left" data-i18n="sec4_t2_quote">
+                        <p class="mt-4 italic text-sm font-serif text-ambar-darkest font-semibold border-l-4 border-ambar-orange pl-4 text-left"
+                            data-i18n="sec4_t2_quote">
                             "Acredito e desenvolvo o Pole Dance como uma forma de expressão artística poderosa e
                             transformadora."
                         </p>
@@ -647,19 +1037,313 @@
             </div>
         </div>
 
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="relative block w-full h-[60px] md:h-[100px] transform scale-105 -mb-[1px]"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                    class="fill-ambar-darkest"></path>
+            </svg>
+        </div>
     </section>
 
-    <section class="relative w-full pt-20 pb-40 ambar-cream">
+    <!-- SECTION: Pricing / Checkout Kiwify -->
+    <section id="pricing" class="py-24 bg-ambar-darkest text-ambar-cream relative overflow-hidden">
+        <div
+            class="absolute top-0 right-0 -mr-20 mt-40 w-96 h-96 bg-ambar-red rounded-full blur-[100px] opacity-50 pointer-events-none">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-ambar-yellow" data-i18n="pricing_title">
+                Escolha o plano ideal para você
+            </h2>
+            <p class="text-lg md:text-xl mb-10 text-ambar-cream/90" data-i18n="pricing_subtitle">
+                Tenha acesso imediato a todas as aulas e à comunidade do Portal Âmbar.
+            </p>
+
+            <!-- Plan Selector Pill Switcher -->
+            <div
+                class="inline-flex p-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-14 shadow-xl">
+                <button onclick="selectPlan('mensal')" id="tab-mensal"
+                    class="plan-tab px-5 sm:px-7 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 text-ambar-cream/80 hover:text-white">
+                    Mensal
+                </button>
+                <button onclick="selectPlan('semestral')" id="tab-semestral"
+                    class="plan-tab px-5 sm:px-7 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 text-ambar-cream/80 hover:text-white">
+                    Semestral
+                </button>
+                <button onclick="selectPlan('anual')" id="tab-anual"
+                    class="plan-tab px-5 sm:px-7 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 bg-ambar-orange text-ambar-darkest shadow-md">
+                    Anual <span
+                        class="bg-amber-900 text-amber-100 text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full ml-1 font-extrabold">Melhor
+                        Valor</span>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch text-left">
+
+                <!-- Pacote Mensal Card -->
+                <div id="card-plan-mensal"
+                    class="plan-card bg-white text-ambar-darkest rounded-[36px] p-8 shadow-xl border-2 border-transparent transition-all duration-300 flex flex-col justify-between hover:border-ambar-orange/50">
+                    <div>
+                        <div class="mb-6">
+                            <span
+                                class="text-xs uppercase tracking-widest font-extrabold text-ambar-orange bg-ambar-orange/15 px-3.5 py-1.5 rounded-full">Acesso
+                                Mensal</span>
+                            <h3 class="font-serif text-2xl font-bold mt-4 text-ambar-darkest"
+                                data-i18n="plan_mensal_title">Pacote Mensal</h3>
+                            <p class="text-sm text-gray-500 mt-1" data-i18n="plan_mensal_sub">Acesso válido por 1 mês
+                            </p>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-xl font-bold text-ambar-darkred">R$</span>
+                                <span class="text-5xl font-extrabold text-ambar-darkest">84</span>
+                                <span class="text-2xl font-bold text-ambar-darkest">,90</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1.5 font-medium" data-i18n="plan_mensal_cash">à vista por
+                                mês</p>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-sm text-gray-600 border-t border-gray-100 pt-6">
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Acesso por 30 dias</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Acesso a todas as modalidades</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Comunidade Exclusiva no WhatsApp</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>7 dias de garantia incondicional</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Guia PDF com combos de treinos
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://pay.kiwify.com.br/GTmKQqA" data-i18n="plan_btn_mensal"
+                        class="block w-full bg-ambar-darkest text-amber-100 font-bold py-4 rounded-2xl text-center hover:bg-ambar-darkred transition-all shadow-md text-base">
+                        Quero o Mensal →
+                    </a>
+                </div>
+
+                <!-- Pacote Anual Card (Highlighted) -->
+                <div id="card-plan-anual" onclick="selectPlan('anual')"
+                    class="plan-card bg-ambar-cream text-ambar-darkest rounded-[36px] p-8 shadow-2xl border-4 border-ambar-orange transition-all duration-300 flex flex-col justify-between relative transform md:-translate-y-4">
+                    <div
+                        class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-ambar-orange to-ambar-red text-white text-xs font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md whitespace-nowrap">
+                        ⭐ Mais Popular
+                    </div>
+                    <div>
+                        <div class="mb-6 mt-2">
+                            <span
+                                class="text-xs uppercase tracking-widest font-extrabold text-ambar-darkred bg-ambar-orange/20 px-3.5 py-1.5 rounded-full">Economia
+                                Máxima</span>
+                            <h3 class="font-serif text-3xl font-bold mt-4 text-ambar-darkest"
+                                data-i18n="plan_anual_title">Pacote Anual</h3>
+                            <p class="text-sm text-amber-900/80 font-medium mt-1" data-i18n="plan_anual_sub">Acesso
+                                válido por 1 ano</p>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-sm font-bold text-gray-500">12x</span>
+                                <span class="text-xl font-bold text-ambar-darkred">R$</span>
+                                <span class="text-5xl font-extrabold text-ambar-darkest">72</span>
+                                <span class="text-2xl font-bold text-ambar-darkest">,29</span>
+                            </div>
+                            <p class="text-sm font-bold text-ambar-darkred mt-1.5" data-i18n="plan_anual_cash">ou R$
+                                699,00 à vista</p>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-sm text-gray-700 border-t border-ambar-orange/20 pt-6">
+                            <li class="flex items-center gap-2.5 font-semibold">
+                                <svg class="w-5 h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>1 ano de acesso ilimitado</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Acesso a todas as modalidades</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Comunidade Exclusiva no WhatsApp</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Guia PDF com combos de treinos</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>7 dias de garantia incondicional</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Consultoria com as professoras.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://pay.kiwify.com.br/mKuH309" data-i18n="plan_btn_anual"
+                        class="block w-full bg-ambar-orange text-ambar-darkest font-extrabold py-4.5 rounded-2xl text-center hover:bg-ambar-yellow transition-all shadow-xl text-lg uppercase tracking-wide animate-cta-pulse">
+                        Quero o Anual →
+                    </a>
+                </div>
+
+                <!-- Pacote Semestral Card -->
+                <div id="card-plan-semestral"
+                    class="plan-card bg-white text-ambar-darkest rounded-[36px] p-8 shadow-xl border-2 border-transparent transition-all duration-300 flex flex-col justify-between hover:border-ambar-orange/50">
+                    <div>
+                        <div class="mb-6">
+                            <span
+                                class="text-xs uppercase tracking-widest font-extrabold text-ambar-darkred bg-ambar-orange/15 px-3.5 py-1.5 rounded-full">Acesso
+                                Semestral</span>
+                            <h3 class="font-serif text-2xl font-bold mt-4 text-ambar-darkest"
+                                data-i18n="plan_semestral_title">Pacote Semestral</h3>
+                            <p class="text-sm text-gray-500 mt-1" data-i18n="plan_semestral_sub">Acesso válido por 6
+                                meses</p>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-sm font-bold text-gray-500">6x</span>
+                                <span class="text-xl font-bold text-ambar-darkred">R$</span>
+                                <span class="text-5xl font-extrabold text-ambar-darkest">78</span>
+                                <span class="text-2xl font-bold text-ambar-darkest">,61</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1.5 font-medium" data-i18n="plan_semestral_cash">ou R$
+                                419,00 à vista</p>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-sm text-gray-600 border-t border-gray-100 pt-6">
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>6 meses de acesso ilimitado</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Acesso a todas as modalidades</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Comunidade Exclusiva no WhatsApp</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>7 dias de garantia incondicional</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Guia PDF com combos de treinos
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://pay.kiwify.com.br/tsYpJPJ" data-i18n="plan_btn_semestral"
+                        class="block w-full bg-ambar-darkest text-amber-100 font-bold py-4 rounded-2xl text-center hover:bg-ambar-darkred transition-all shadow-md text-base">
+                        Quero o Semestral →
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-12 flex justify-center items-center gap-2 text-sm text-gray-400">
+                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                    </path>
+                </svg>
+                Pagamento 100% Seguro via Kiwify • Garantia de 7 dias • Acesso imediato.
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="relative block w-full h-[60px] md:h-[100px] transform scale-105 -mb-[1px]"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                    class="fill-ambar-cream"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SECTION: FAQ (Perguntas Frequentes) -->
+    <section id="faq" class="relative w-full pt-20 pb-40 bg-ambar-cream">
         <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-12 gap-16">
 
             <div class="md:col-span-5 flex flex-col justify-start">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-6" data-i18n="sec5_title_p1">Perguntas <span
-                        class="text-ambar-orange" data-i18n="sec5_title_p2">frequentes</span></h2>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-ambar-darkest mb-6" data-i18n="sec5_title_p1">
+                    Perguntas <span class="text-ambar-orange" data-i18n="sec5_title_p2">frequentes</span></h2>
                 <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-i18n="sec5_desc">
                     Ainda tem dúvidas se o Portal Âmbar é o lugar certo para você ou como funciona nosso acesso?
                     Separamos as respostas para as perguntas mais comuns.
                 </p>
-                <a href="#checkout-kiwify"
+                <a href="#pricing"
                     class="inline-flex items-center justify-center gap-2 bg-ambar-orange text-white font-bold text-lg px-8 py-4 rounded-full transition-all hover:bg-ambar-darkred w-fit shadow-lg hover:-translate-y-1">
                     Quero me inscrever
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -675,44 +1359,6 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q1">E se eu me arrepender?</span>
-                        <div
-                            class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </div>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a1">Você tem até 7 dias para desistir e nós devolvemos o seu
-                            dinheiro integralmente.</div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                    <button onclick="toggleFaq(this)"
-                        class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q2">Posso cancelar depois dos 7 dias?</span>
-                        <div
-                            class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </div>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a2">Não, você só tem os 7 primeiros dias disponíveis para
-                            cancelamento e reembolso. Depois disso, você se compromete com a assinatura de 1 ano.</div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                    <button onclick="toggleFaq(this)"
-                        class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q3">O que está incluso?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
@@ -723,8 +1369,9 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a3">Acesso ilimitado a todas as aulas gravadas, bônus e
-                            comunidade por um período de 1 ano.</div>
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a3">Acesso ilimitado a todas as aulas
+                            gravadas, bônus e
+                            comunidade pelo período da assinatura escolhida.</div>
                     </div>
                 </div>
 
@@ -732,7 +1379,8 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q4">As aulas saem do ar?</span>
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q4">As aulas saem do
+                            ar?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -742,8 +1390,9 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a4">Não, as aulas são permanentes dentro do seu período de
-                            acesso de 1 ano.</div>
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a4">Não, as aulas são permanentes dentro do
+                            período de
+                            assinatura escolhida.</div>
                     </div>
                 </div>
 
@@ -751,7 +1400,8 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q5">Sou iniciante, esse curso é pra mim?</span>
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q5">Sou iniciante, esse curso
+                            é pra mim?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -761,7 +1411,8 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a5">Sim! Temos módulos básicos, mas é necessário que você já
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a5">Sim! Temos módulos básicos, mas é
+                            necessário que você já
                             tenha tido um contato prévio com o pole dance ou exotic para fazer as aulas dessas
                             modalidades. Já para as aulas que não precisam de barra, elas são para todos os níveis!
                         </div>
@@ -772,7 +1423,8 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q6">Por qual aula eu começo?</span>
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q6">Por qual aula eu
+                            começo?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -782,7 +1434,8 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a6">Depende de qual modalidade você deseja praticar, mas é
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a6">Depende de qual modalidade você deseja
+                            praticar, mas é
                             sempre importante começar por um dos aquecimentos, passar por uma aula de fortalecimento e
                             só então ir para as específicas. Temos um PDF com sugestões de combos para guiar seus
                             treinos!</div>
@@ -793,7 +1446,8 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q7">Não tenho barra, esse curso é pra mim?</span>
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q7">Não tenho barra, esse
+                            curso é pra mim?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -803,7 +1457,8 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a7">Sim! Temos diversas aulas que não dependem da barra.
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a7">Sim! Temos diversas aulas que não
+                            dependem da barra.
                             Aproveite para fortalecer seu corpo, desenvolver sua flexibilidade e aprender tricks livres.
                             Quando tiver sua própria barra, você poderá aplicar toda essa base nas demais aulas.</div>
                     </div>
@@ -813,7 +1468,8 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q8">Não tenho força nem flexibilidade, consigo
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q8">Não tenho força nem
+                            flexibilidade, consigo
                             fazer?</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
@@ -824,7 +1480,8 @@
                         </div>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a8">Com certeza! A plataforma é para todos os corpos. Você vai
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a8">Com certeza! A plataforma é para todos
+                            os corpos. Você vai
                             desenvolvendo e conquistando sua força e sua flexibilidade gradativamente no decorrer das
                             aulas.</div>
                     </div>
@@ -834,7 +1491,8 @@
                     class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                     <button onclick="toggleFaq(this)"
                         class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q9">Outras dúvidas rápidas (Pagamento, Salto,
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q9">Outras dúvidas rápidas
+                            (Pagamento, Salto,
                             Suporte)</span>
                         <div
                             class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
@@ -846,13 +1504,56 @@
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
                         <div class="px-6 pb-5 text-gray-600 space-y-2" data-i18n="faq_a9">
-                            <p><strong>Formas de pagamento:</strong> Cartão de crédito em até 12x, PIX ou Boleto.</p>
+                            <p><strong>Formas de pagamento:</strong> Cartão de crédito em até 12x ou PIX.</p>
                             <p><strong>Aulas Novas:</strong> Temos aulas novas todos os meses!</p>
                             <p><strong>Uso de salto:</strong> Você pode fazer as aulas com ou sem salto, como se sentir
                                 mais confortável.</p>
                             <p><strong>Suporte:</strong> Temos um canal exclusivo no WhatsApp para trocar ideias e tirar
                                 dúvidas com a comunidade e as professoras!</p>
                         </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <button onclick="toggleFaq(this)"
+                        class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q1">E se eu me
+                            arrepender?</span>
+                        <div
+                            class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a1">Você tem até 7 dias para desistir e nós
+                            devolvemos o seu
+                            dinheiro integralmente.</div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white border border-ambar-orange/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <button onclick="toggleFaq(this)"
+                        class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-ambar-darkest text-lg" data-i18n="faq_q2">Posso cancelar depois dos
+                            7 dias?</span>
+                        <div
+                            class="w-8 h-8 rounded-full bg-ambar-orange/20 text-ambar-orange flex items-center justify-center shrink-0 transition-transform duration-300 icon-wrapper">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
+                        <div class="px-6 pb-5 text-gray-600" data-i18n="faq_a2">Você só tem os 7 primeiros dias
+                            disponíveis para
+                            cancelamento e reembolso. Depois disso, você se compromete com a assinatura do plano
+                            escolhido até a data do próximo vencimento.</div>
                     </div>
                 </div>
 
@@ -869,274 +1570,43 @@
         </div>
     </section>
 
-    <section id="checkout-kiwify" class="py-24 bg-ambar-darkest text-ambar-cream relative overflow-hidden">
+    <!-- SECTION: Final Conversion CTA -->
+    <section class="relative py-24 pb-36 bg-ambar-darkest text-ambar-cream overflow-hidden text-center">
         <div
-            class="absolute top-0 right-0 -mr-20 mt-40 w-96 h-96 bg-ambar-red rounded-full blur-[100px] opacity-50 pointer-events-none">
+            class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-ambar-red/30 via-transparent to-transparent pointer-events-none">
+        </div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="font-serif text-4xl md:text-6xl font-bold mb-4 text-ambar-yellow" data-i18n="final_cta_title">
+                Sua jornada começa agora.
+            </h2>
+            <p class="text-lg md:text-2xl text-ambar-cream/90 mb-10 max-w-2xl mx-auto leading-relaxed"
+                data-i18n="final_cta_subtitle">
+                Garanta seu acesso e comece a transformar sua prática de pole dance no seu próprio ritmo hoje mesmo.
+            </p>
+            <a href="#pricing" data-i18n="final_cta_btn"
+                class="inline-block bg-ambar-orange text-ambar-darkest font-extrabold text-lg md:text-xl px-10 py-5 rounded-full hover:bg-ambar-yellow transition-all shadow-2xl hover:scale-105 uppercase tracking-wide animate-cta-pulse">
+                Quero me inscrever agora →
+            </a>
         </div>
 
-        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-ambar-yellow" data-i18n="pricing_title">Sua jornada começa agora.
-            </h2>
-            <p class="text-xl mb-12" data-i18n="pricing_subtitle">Tenha acesso imediato a todas as aulas e à comunidade do Portal
-                Âmbar.</p>
-
-            <div class="bg-ambar-cream text-ambar-darkest rounded-[40px] p-8 md:p-12 shadow-2xl max-w-2xl mx-auto">
-                <p class="text-sm uppercase tracking-widest font-bold text-ambar-red mb-4" data-i18n="pricing_offer">Oferta Especial</p>
-                <div class="flex justify-center items-baseline mb-4">
-                    <span class="text-gray-500 line-through text-2xl mr-3">R$ 584,71</span>
-                    <span class="text-5xl font-extrabold text-ambar-darkest">12x R$ 51,40</span>
-                </div>
-                <p class="text-gray-600 mb-8" data-i18n="pricing_cash">ou R$ 497,00 à vista</p>
-
-                <ul class="text-left space-y-4 mb-10 max-w-sm mx-auto">
-                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-600" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg> <span data-i18n="pricing_li1">1 ano de acesso</span></li>
-                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-600" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg> <span data-i18n="pricing_li2">Acesso à Comunidade Exclusiva</span></li>
-                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-600" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg> <span data-i18n="pricing_li3">7 dias de garantia</span></li>
-                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-600" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg> <span data-i18n="pricing_li4">Acesso imediato e 100% online</span></li>
-                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-600" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg> <span data-i18n="pricing_li5">Suporte via Whatsapp</span></li>
-                </ul>
-
-                <a href="https://pay.kiwify.com.br/99jMSuS"
-                    class="block w-full bg-ambar-orange text-ambar-darkest font-bold text-xl py-6 rounded-full animate-cta-pulse transition-all hover:bg-ambar-yellow hover:scale-105 shadow-xl uppercase tracking-wide" data-i18n="pricing_btn">
-                    Quero me inscrever agora
-                </a>
-
-                <div class="mt-6 flex justify-center items-center gap-2 text-sm text-gray-500">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
-                        </path>
-                    </svg>
-                    Pagamento 100% Seguro via Kiwify
-                </div>
-            </div>
+        <!-- Bottom Wave into Footer -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="relative block w-full h-[60px] md:h-[100px] transform scale-105 scale-x-[-1] -mb-[1px]"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                    class="fill-ambar-darkest"></path>
+            </svg>
         </div>
     </section>
 
-    <footer class="bg-ambar-darkest text-ambar-cream/50 py-10 text-center border-t border-ambar-red/30">
-        <p class="font-serif italic text-2xl text-ambar-lightorange mb-4">Portal Âmbar</p>
+    <!-- FOOTER -->
+    <footer class="bg-ambar-darkest text-ambar-cream/50 py-10 text-center border-t border-ambar-red/30 relative z-10">
+        <p class="font-serif italic text-2xl text-ambar-lightorange mb-2">Portal Âmbar</p>
         <p class="text-sm" data-i18n="footer_rights">© 2026 Projeto Âmbar. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        let currentLang = 'pt';
-        const translations = {};
-
-        async function loadTranslations(lang) {
-            if (!translations[lang]) {
-                try {
-                    const response = await fetch(`lang/${lang}.json`);
-                    translations[lang] = await response.json();
-                } catch (error) {
-                    console.error("Erro ao carregar tradução:", error);
-                    return;
-                }
-            }
-            applyTranslations(lang);
-        }
-
-        function applyTranslations(lang) {
-            const elements = document.querySelectorAll('[data-i18n]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    el.innerHTML = translations[lang][key];
-                }
-            });
-            
-            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
-            
-            const langBtn = document.getElementById('lang-toggle');
-            if (langBtn) {
-                langBtn.innerText = lang === 'pt' ? 'English' : 'Português';
-            }
-        }
-
-        function toggleLanguage() {
-            currentLang = currentLang === 'pt' ? 'en' : 'pt';
-            loadTranslations(currentLang);
-        }
-
-        function toggleCurriculo(id, btnElement) {
-            const content = document.getElementById(id);
-            const textSpan = btnElement.querySelector('.btn-text');
-            const arrowIcon = btnElement.querySelector('.icon-arrow');
-
-            if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
-                content.style.maxHeight = content.scrollHeight + "px";
-                content.style.opacity = "1";
-                content.style.marginTop = "1rem";
-                textSpan.innerText = translations[currentLang]["btn_curr_recolher"] || "Recolher currículo";
-                arrowIcon.style.transform = "rotate(180deg)";
-            } else {
-                content.style.maxHeight = "0px";
-                content.style.opacity = "0";
-                content.style.marginTop = "0px";
-                textSpan.innerText = translations[currentLang]["btn_curr_ver"] || "Ver currículo completo";
-                arrowIcon.style.transform = "rotate(0deg)";
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            loadTranslations('pt');
-            const track = document.getElementById('carousel-track');
-            const btnPrev = document.getElementById('btn-prev');
-            const btnNext = document.getElementById('btn-next');
-            const progressBar = document.getElementById('carousel-progress');
-
-            if (btnNext && btnPrev && track) {
-                const scrollAmount = 340;
-
-                btnNext.addEventListener('click', () => {
-                    track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-                });
-
-                btnPrev.addEventListener('click', () => {
-                    track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-                });
-
-                let isScrolling = false;
-                track.addEventListener('scroll', () => {
-                    if (!isScrolling) {
-                        window.requestAnimationFrame(() => {
-                            const maxScrollLeft = track.scrollWidth - track.clientWidth;
-                            const scrollPercentage = (track.scrollLeft / maxScrollLeft) * 100;
-                            const barWidth = Math.max(33, scrollPercentage);
-                            progressBar.style.width = `${barWidth}%`;
-                            isScrolling = false;
-                        });
-                        isScrolling = true;
-                    }
-                });
-            }
-        });
-
-        function toggleCard(clickedCard) {
-            const allCards = document.querySelectorAll('.carousel-card');
-            const isAlreadyExpanded = clickedCard.classList.contains('is-expanded');
-
-            allCards.forEach(card => {
-                card.classList.remove('is-expanded');
-                card.classList.remove('w-[85vw]', 'md:w-[850px]', 'h-[650px]', 'md:h-[550px]');
-                card.classList.add('w-[280px]', 'md:w-[320px]', 'h-[400px]');
-
-                const imgContainer = card.querySelector('.image-container');
-                if (imgContainer) {
-                    imgContainer.classList.remove('w-[85vw]', 'md:w-[500px]', 'h-[350px]', 'md:h-[550px]');
-                    imgContainer.classList.add('w-[280px]', 'md:w-[320px]', 'h-[400px]', 'md:h-[400px]');
-                }
-
-                const imgMain = card.querySelector('.img-main');
-                if (imgMain) imgMain.style.objectFit = 'cover';
-
-                const imgBlur = card.querySelector('.img-blur');
-                if (imgBlur) {
-                    imgBlur.classList.remove('opacity-60');
-                    imgBlur.classList.add('opacity-0');
-                }
-
-                const overlay = card.querySelector('.gradient-overlay');
-                if (overlay) overlay.style.opacity = '1';
-
-                const title = card.querySelector('.card-title');
-                if (title) {
-                    title.style.opacity = '1';
-                    title.style.transform = 'translateY(0)';
-                }
-
-                const content = card.querySelector('.card-content');
-                if (content) {
-                    content.classList.remove('opacity-100');
-                    content.classList.add('hidden', 'md:flex');
-                }
-            });
-
-            if (!isAlreadyExpanded) {
-                clickedCard.classList.add('is-expanded');
-
-                clickedCard.classList.remove('w-[280px]', 'md:w-[320px]', 'h-[400px]');
-                clickedCard.classList.add('w-[85vw]', 'md:w-[850px]', 'h-[650px]', 'md:h-[550px]');
-
-                const imgContainer = clickedCard.querySelector('.image-container');
-                if (imgContainer) {
-                    imgContainer.classList.remove('w-[280px]', 'md:w-[320px]', 'h-[400px]', 'md:h-[400px]');
-                    imgContainer.classList.add('w-[85vw]', 'md:w-[500px]', 'h-[350px]', 'md:h-[550px]');
-                }
-
-                const content = clickedCard.querySelector('.card-content');
-                if (content) {
-                    content.classList.remove('hidden');
-                }
-
-                setTimeout(() => {
-                    const imgMain = clickedCard.querySelector('.img-main');
-                    if (imgMain) imgMain.style.objectFit = 'cover';
-
-                    const imgBlur = clickedCard.querySelector('.img-blur');
-                    if (imgBlur) {
-                        imgBlur.classList.remove('opacity-0');
-                        imgBlur.classList.add('opacity-60');
-                    }
-
-                    const overlay = clickedCard.querySelector('.gradient-overlay');
-                    if (overlay) overlay.style.opacity = '0';
-
-                    const title = clickedCard.querySelector('.card-title');
-                    if (title) {
-                        title.style.opacity = '0';
-                        title.style.transform = 'translateY(20px)';
-                    }
-
-                    if (content) content.classList.add('opacity-100');
-                }, 200);
-
-                setTimeout(() => {
-                    clickedCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                }, 300);
-            }
-        }
-
-        function toggleFaq(button) {
-            const content = button.nextElementSibling;
-            const icon = button.querySelector('.icon-wrapper');
-
-            if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
-                content.style.maxHeight = content.scrollHeight + 'px';
-                content.style.opacity = '1';
-
-                icon.style.transform = 'rotate(180deg)';
-                icon.classList.remove('bg-ambar-orange/20', 'text-ambar-orange');
-                icon.classList.add('bg-ambar-orange', 'text-white');
-            } else {
-                content.style.maxHeight = '0px';
-                content.style.opacity = '0';
-
-                icon.style.transform = 'rotate(0deg)';
-                icon.classList.remove('bg-ambar-orange', 'text-white');
-                icon.classList.add('bg-ambar-orange/20', 'text-ambar-orange');
-            }
-        }
-    </script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
