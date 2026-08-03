@@ -1086,8 +1086,8 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch text-left">
 
                 <!-- Pacote Mensal Card -->
-                <div id="card-plan-mensal"
-                    class="plan-card bg-white text-ambar-darkest rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 shadow-xl border-2 border-transparent transition-all duration-300 hidden md:flex flex-col justify-between hover:border-ambar-orange/50">
+                <div id="card-plan-mensal" onclick="selectPlan('mensal')"
+                    class="plan-card bg-white text-ambar-darkest rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 shadow-xl border-2 border-transparent transition-all duration-300 hidden md:flex flex-col justify-between hover:border-ambar-orange/50 cursor-pointer">
                     <div>
                         <div class="mb-4 sm:mb-6">
                             <span data-i18n="plan_mensal_tag"
@@ -1161,7 +1161,7 @@
 
                 <!-- Pacote Anual Card (Highlighted) -->
                 <div id="card-plan-anual" onclick="selectPlan('anual')"
-                    class="plan-card bg-ambar-cream text-ambar-darkest rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 shadow-2xl border-4 border-ambar-orange transition-all duration-300 flex flex-col justify-between relative opacity-100 scale-100 md:scale-[1.03] z-20 ring-4 ring-ambar-orange/30 shadow-[0_0_40px_rgba(233,142,41,0.4)]">
+                    class="plan-card bg-ambar-cream text-ambar-darkest rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 shadow-2xl border-4 border-ambar-orange transition-all duration-300 flex flex-col justify-between relative opacity-100 scale-100 md:scale-[1.03] z-20 ring-4 ring-ambar-orange/30 shadow-[0_0_40px_rgba(233,142,41,0.4)] cursor-pointer">
                     <div data-i18n="plan_popular_tag"
                         class="absolute -top-3.5 sm:-top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-ambar-orange to-ambar-red text-white text-[10px] sm:text-xs font-extrabold uppercase tracking-widest px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full shadow-md whitespace-nowrap">
                         ⭐ Mais Popular
@@ -1247,8 +1247,8 @@
                 </div>
 
                 <!-- Pacote Semestral Card -->
-                <div id="card-plan-semestral"
-                    class="plan-card bg-white text-ambar-darkest rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 shadow-xl border-2 border-transparent transition-all duration-300 hidden md:flex flex-col justify-between hover:border-ambar-orange/50">
+                <div id="card-plan-semestral" onclick="selectPlan('semestral')"
+                    class="plan-card bg-white text-ambar-darkest rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 shadow-xl border-2 border-transparent transition-all duration-300 hidden md:flex flex-col justify-between hover:border-ambar-orange/50 cursor-pointer">
                     <div>
                         <div class="mb-4 sm:mb-6">
                             <span data-i18n="plan_semestral_tag"
