@@ -44,17 +44,17 @@ function selectPlan(planName) {
 
         if (p === planName) {
             if (btn) {
-                btn.className = "plan-tab px-6 py-3 rounded-full font-extrabold text-sm md:text-base transition-all duration-300 bg-ambar-orange text-ambar-darkest shadow-xl scale-105 ring-2 ring-white/50";
+                btn.className = "plan-tab px-3.5 sm:px-7 py-2.5 sm:py-3 rounded-full font-extrabold text-xs md:text-base transition-all duration-300 bg-ambar-orange text-ambar-darkest shadow-xl scale-105 ring-2 ring-white/50 whitespace-nowrap";
             }
             if (card) {
-                card.className = "plan-card bg-ambar-cream text-ambar-darkest rounded-[36px] p-8 shadow-2xl border-4 border-ambar-orange transition-all duration-500 flex flex-col justify-between relative opacity-100 scale-[1.03] z-20 ring-4 ring-ambar-orange/30 shadow-[0_0_40px_rgba(233,142,41,0.4)]";
+                card.className = "plan-card bg-ambar-cream text-ambar-darkest rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 shadow-2xl border-4 border-ambar-orange transition-all duration-500 flex flex-col justify-between relative opacity-100 scale-100 md:scale-[1.03] z-20 ring-4 ring-ambar-orange/30 shadow-[0_0_40px_rgba(233,142,41,0.4)]";
             }
         } else {
             if (btn) {
-                btn.className = "plan-tab px-6 py-3 rounded-full font-extrabold text-sm md:text-base transition-all duration-300 text-ambar-cream/70 hover:text-white bg-transparent";
+                btn.className = "plan-tab px-3.5 sm:px-7 py-2.5 sm:py-3 rounded-full font-extrabold text-xs md:text-base transition-all duration-300 text-ambar-cream/70 hover:text-white bg-transparent whitespace-nowrap";
             }
             if (card) {
-                card.className = "plan-card bg-white/95 text-ambar-darkest rounded-[36px] p-8 shadow-md border-2 border-transparent transition-all duration-500 flex flex-col justify-between relative opacity-50 scale-95 z-0 hover:opacity-90 cursor-pointer";
+                card.className = "plan-card bg-white/95 text-ambar-darkest rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 shadow-md border-2 border-transparent transition-all duration-500 hidden md:flex flex-col justify-between relative md:opacity-50 md:scale-95 z-0 hover:opacity-90 cursor-pointer";
             }
         }
     });

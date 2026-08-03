@@ -1062,50 +1062,50 @@
 
             <!-- Plan Selector Pill Switcher -->
             <div
-                class="inline-flex p-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-14 shadow-xl">
+                class="inline-flex p-1 sm:p-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8 sm:mb-14 shadow-xl max-w-full overflow-x-auto">
                 <button onclick="selectPlan('mensal')" id="tab-mensal" data-i18n="tab_mensal"
-                    class="plan-tab px-5 sm:px-7 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 text-ambar-cream/80 hover:text-white">
+                    class="plan-tab px-3.5 sm:px-7 py-2.5 sm:py-3 rounded-full font-bold text-xs md:text-base transition-all duration-300 text-ambar-cream/80 hover:text-white whitespace-nowrap">
                     Mensal
                 </button>
                 <button onclick="selectPlan('semestral')" id="tab-semestral" data-i18n="tab_semestral"
-                    class="plan-tab px-5 sm:px-7 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 text-ambar-cream/80 hover:text-white">
+                    class="plan-tab px-3.5 sm:px-7 py-2.5 sm:py-3 rounded-full font-bold text-xs md:text-base transition-all duration-300 text-ambar-cream/80 hover:text-white whitespace-nowrap">
                     Semestral
                 </button>
                 <button onclick="selectPlan('anual')" id="tab-anual"
-                    class="plan-tab px-5 sm:px-7 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 bg-ambar-orange text-ambar-darkest shadow-md">
+                    class="plan-tab px-3.5 sm:px-7 py-2.5 sm:py-3 rounded-full font-bold text-xs md:text-base transition-all duration-300 bg-ambar-orange text-ambar-darkest shadow-md whitespace-nowrap">
                     <span data-i18n="tab_anual">Anual</span> <span data-i18n="tab_best_val"
-                        class="bg-amber-900 text-amber-100 text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full ml-1 font-extrabold">Melhor
+                        class="bg-amber-900 text-amber-100 text-[9px] sm:text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded-full ml-0.5 sm:ml-1 font-extrabold">Melhor
                         Valor</span>
                 </button>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch text-left">
 
                 <!-- Pacote Mensal Card -->
                 <div id="card-plan-mensal"
-                    class="plan-card bg-white text-ambar-darkest rounded-[36px] p-8 shadow-xl border-2 border-transparent transition-all duration-300 flex flex-col justify-between hover:border-ambar-orange/50">
+                    class="plan-card bg-white text-ambar-darkest rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 shadow-xl border-2 border-transparent transition-all duration-300 hidden md:flex flex-col justify-between hover:border-ambar-orange/50">
                     <div>
-                        <div class="mb-6">
+                        <div class="mb-4 sm:mb-6">
                             <span data-i18n="plan_mensal_tag"
-                                class="text-xs uppercase tracking-widest font-extrabold text-ambar-orange bg-ambar-orange/15 px-3.5 py-1.5 rounded-full">Acesso
+                                class="text-[10px] sm:text-xs uppercase tracking-widest font-extrabold text-ambar-orange bg-ambar-orange/15 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full">Acesso
                                 Mensal</span>
-                            <h3 class="font-serif text-2xl font-bold mt-4 text-ambar-darkest"
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold mt-3 sm:mt-4 text-ambar-darkest"
                                 data-i18n="plan_mensal_title">Pacote Mensal</h3>
-                            <p class="text-sm text-gray-500 mt-1" data-i18n="plan_mensal_sub">Acesso válido por 1 mês
+                            <p class="text-xs sm:text-sm text-gray-500 mt-1" data-i18n="plan_mensal_sub">Acesso válido por 1 mês
                             </p>
                         </div>
-                        <div class="mb-6">
+                        <div class="mb-4 sm:mb-6">
                             <div class="flex items-baseline gap-1">
-                                <span class="text-xl font-bold text-ambar-darkred">R$</span>
-                                <span class="text-5xl font-extrabold text-ambar-darkest">84</span>
-                                <span class="text-2xl font-bold text-ambar-darkest">,90</span>
+                                <span class="text-lg sm:text-xl font-bold text-ambar-darkred">R$</span>
+                                <span class="text-4xl sm:text-5xl font-extrabold text-ambar-darkest">84</span>
+                                <span class="text-xl sm:text-2xl font-bold text-ambar-darkest">,90</span>
                             </div>
-                            <p class="text-xs text-gray-500 mt-1.5 font-medium" data-i18n="plan_mensal_cash">à vista por
+                            <p class="text-xs text-gray-500 mt-1 font-medium" data-i18n="plan_mensal_cash">à vista por
                                 mês</p>
                         </div>
-                        <ul class="space-y-3 mb-8 text-sm text-gray-600 border-t border-gray-100 pt-6">
+                        <ul class="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-5 sm:pt-6">
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M5 13l4 4L19 7"></path>
@@ -1113,7 +1113,7 @@
                                 <span data-i18n="plan_mensal_feat1">Acesso por 30 dias</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M5 13l4 4L19 7"></path>
@@ -1121,7 +1121,7 @@
                                 <span data-i18n="plan_feat_all_modalities">Acesso a todas as modalidades</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M5 13l4 4L19 7"></path>
@@ -1129,7 +1129,7 @@
                                 <span data-i18n="plan_feat_whatsapp">Comunidade Exclusiva no WhatsApp</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M5 13l4 4L19 7"></path>
@@ -1137,7 +1137,7 @@
                                 <span data-i18n="plan_feat_garantia">7 dias de garantia incondicional</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M5 13l4 4L19 7"></path>
@@ -1148,41 +1148,41 @@
                         </ul>
                     </div>
                     <a href="https://pay.kiwify.com.br/GTmKQqA" data-i18n="plan_btn_mensal"
-                        class="block w-full bg-ambar-darkest text-amber-100 font-bold py-4 rounded-2xl text-center hover:bg-ambar-darkred transition-all shadow-md text-base">
+                        class="block w-full bg-ambar-darkest text-amber-100 font-bold py-3.5 sm:py-4 rounded-2xl text-center hover:bg-ambar-darkred transition-all shadow-md text-sm sm:text-base">
                         Quero o Mensal →
                     </a>
                 </div>
 
                 <!-- Pacote Anual Card (Highlighted) -->
                 <div id="card-plan-anual" onclick="selectPlan('anual')"
-                    class="plan-card bg-ambar-cream text-ambar-darkest rounded-[36px] p-8 shadow-2xl border-4 border-ambar-orange transition-all duration-300 flex flex-col justify-between relative transform md:-translate-y-4">
+                    class="plan-card bg-ambar-cream text-ambar-darkest rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 shadow-2xl border-4 border-ambar-orange transition-all duration-300 flex flex-col justify-between relative opacity-100 scale-100 md:scale-[1.03] z-20 ring-4 ring-ambar-orange/30 shadow-[0_0_40px_rgba(233,142,41,0.4)]">
                     <div data-i18n="plan_popular_tag"
-                        class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-ambar-orange to-ambar-red text-white text-xs font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md whitespace-nowrap">
+                        class="absolute -top-3.5 sm:-top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-ambar-orange to-ambar-red text-white text-[10px] sm:text-xs font-extrabold uppercase tracking-widest px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full shadow-md whitespace-nowrap">
                         ⭐ Mais Popular
                     </div>
                     <div>
-                        <div class="mb-6 mt-2">
+                        <div class="mb-4 sm:mb-6 mt-1 sm:mt-2">
                             <span data-i18n="plan_max_eco_tag"
-                                class="text-xs uppercase tracking-widest font-extrabold text-ambar-darkred bg-ambar-orange/20 px-3.5 py-1.5 rounded-full">Economia
+                                class="text-[10px] sm:text-xs uppercase tracking-widest font-extrabold text-ambar-darkred bg-ambar-orange/20 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full">Economia
                                 Máxima</span>
-                            <h3 class="font-serif text-3xl font-bold mt-4 text-ambar-darkest"
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold mt-3 sm:mt-4 text-ambar-darkest"
                                 data-i18n="plan_anual_title">Pacote Anual</h3>
-                            <p class="text-sm text-amber-900/80 font-medium mt-1" data-i18n="plan_anual_sub">Acesso
+                            <p class="text-xs sm:text-sm text-amber-900/80 font-medium mt-1" data-i18n="plan_anual_sub">Acesso
                                 válido por 1 ano</p>
                         </div>
-                        <div class="mb-6">
+                        <div class="mb-4 sm:mb-6">
                             <div class="flex items-baseline gap-1">
-                                <span class="text-sm font-bold text-gray-500">12x</span>
-                                <span class="text-xl font-bold text-ambar-darkred">R$</span>
-                                <span class="text-5xl font-extrabold text-ambar-darkest">72</span>
-                                <span class="text-2xl font-bold text-ambar-darkest">,29</span>
+                                <span class="text-xs sm:text-sm font-bold text-gray-500">12x</span>
+                                <span class="text-lg sm:text-xl font-bold text-ambar-darkred">R$</span>
+                                <span class="text-4xl sm:text-5xl font-extrabold text-ambar-darkest">72</span>
+                                <span class="text-xl sm:text-2xl font-bold text-ambar-darkest">,29</span>
                             </div>
-                            <p class="text-sm font-bold text-ambar-darkred mt-1.5" data-i18n="plan_anual_cash">ou R$
+                            <p class="text-xs sm:text-sm font-bold text-ambar-darkred mt-1" data-i18n="plan_anual_cash">ou R$
                                 699,00 à vista</p>
                         </div>
-                        <ul class="space-y-3 mb-8 text-sm text-gray-700 border-t border-ambar-orange/20 pt-6">
+                        <ul class="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8 text-xs sm:text-sm text-gray-700 border-t border-ambar-orange/20 pt-5 sm:pt-6">
                             <li class="flex items-center gap-2.5 font-semibold">
-                                <svg class="w-5 h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                         d="M5 13l4 4L19 7"></path>
@@ -1190,7 +1190,7 @@
                                 <span data-i18n="plan_anual_feat1">1 ano de acesso ilimitado</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                         d="M5 13l4 4L19 7"></path>
@@ -1198,7 +1198,7 @@
                                 <span data-i18n="plan_feat_all_modalities">Acesso a todas as modalidades</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                         d="M5 13l4 4L19 7"></path>
@@ -1206,7 +1206,7 @@
                                 <span data-i18n="plan_feat_whatsapp">Comunidade Exclusiva no WhatsApp</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                         d="M5 13l4 4L19 7"></path>
@@ -1214,7 +1214,7 @@
                                 <span data-i18n="plan_feat_pdf">Guia PDF com combos de treinos</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                         d="M5 13l4 4L19 7"></path>
@@ -1222,7 +1222,7 @@
                                 <span data-i18n="plan_feat_garantia">7 dias de garantia incondicional</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-ambar-orange flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                         d="M5 13l4 4L19 7"></path>
@@ -1232,37 +1232,37 @@
                         </ul>
                     </div>
                     <a href="https://pay.kiwify.com.br/mKuH309" data-i18n="plan_btn_anual"
-                        class="block w-full bg-ambar-orange text-ambar-darkest font-extrabold py-4.5 rounded-2xl text-center hover:bg-ambar-yellow transition-all shadow-xl text-lg uppercase tracking-wide animate-cta-pulse">
+                        class="block w-full bg-ambar-orange text-ambar-darkest font-extrabold py-3.5 sm:py-4.5 rounded-2xl text-center hover:bg-ambar-yellow transition-all shadow-xl text-base sm:text-lg uppercase tracking-wide animate-cta-pulse">
                         Quero o Anual →
                     </a>
                 </div>
 
                 <!-- Pacote Semestral Card -->
                 <div id="card-plan-semestral"
-                    class="plan-card bg-white text-ambar-darkest rounded-[36px] p-8 shadow-xl border-2 border-transparent transition-all duration-300 flex flex-col justify-between hover:border-ambar-orange/50">
+                    class="plan-card bg-white text-ambar-darkest rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 shadow-xl border-2 border-transparent transition-all duration-300 hidden md:flex flex-col justify-between hover:border-ambar-orange/50">
                     <div>
-                        <div class="mb-6">
+                        <div class="mb-4 sm:mb-6">
                             <span data-i18n="plan_semestral_tag"
-                                class="text-xs uppercase tracking-widest font-extrabold text-ambar-darkred bg-ambar-orange/15 px-3.5 py-1.5 rounded-full">Acesso
+                                class="text-[10px] sm:text-xs uppercase tracking-widest font-extrabold text-ambar-darkred bg-ambar-orange/15 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full">Acesso
                                 Semestral</span>
-                            <h3 class="font-serif text-2xl font-bold mt-4 text-ambar-darkest"
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold mt-3 sm:mt-4 text-ambar-darkest"
                                 data-i18n="plan_semestral_title">Pacote Semestral</h3>
-                            <p class="text-sm text-gray-500 mt-1" data-i18n="plan_semestral_sub">Acesso válido por 6
+                            <p class="text-xs sm:text-sm text-gray-500 mt-1" data-i18n="plan_semestral_sub">Acesso válido por 6
                                 meses</p>
                         </div>
-                        <div class="mb-6">
+                        <div class="mb-4 sm:mb-6">
                             <div class="flex items-baseline gap-1">
-                                <span class="text-sm font-bold text-gray-500">6x</span>
-                                <span class="text-xl font-bold text-ambar-darkred">R$</span>
-                                <span class="text-5xl font-extrabold text-ambar-darkest">78</span>
-                                <span class="text-2xl font-bold text-ambar-darkest">,61</span>
+                                <span class="text-xs sm:text-sm font-bold text-gray-500">6x</span>
+                                <span class="text-lg sm:text-xl font-bold text-ambar-darkred">R$</span>
+                                <span class="text-4xl sm:text-5xl font-extrabold text-ambar-darkest">78</span>
+                                <span class="text-xl sm:text-2xl font-bold text-ambar-darkest">,61</span>
                             </div>
-                            <p class="text-xs text-gray-500 mt-1.5 font-medium" data-i18n="plan_semestral_cash">ou R$
+                            <p class="text-xs text-gray-500 mt-1 font-medium" data-i18n="plan_semestral_cash">ou R$
                                 419,00 à vista</p>
                         </div>
-                        <ul class="space-y-3 mb-8 text-sm text-gray-600 border-t border-gray-100 pt-6">
+                        <ul class="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-5 sm:pt-6">
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M5 13l4 4L19 7"></path>
@@ -1270,7 +1270,7 @@
                                 <span data-i18n="plan_semestral_feat1">6 meses de acesso ilimitado</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M5 13l4 4L19 7"></path>
@@ -1278,7 +1278,7 @@
                                 <span data-i18n="plan_feat_all_modalities">Acesso a todas as modalidades</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M5 13l4 4L19 7"></path>
@@ -1286,7 +1286,7 @@
                                 <span data-i18n="plan_feat_whatsapp">Comunidade Exclusiva no WhatsApp</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M5 13l4 4L19 7"></path>
@@ -1294,7 +1294,7 @@
                                 <span data-i18n="plan_feat_garantia">7 dias de garantia incondicional</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M5 13l4 4L19 7"></path>
@@ -1305,14 +1305,14 @@
                         </ul>
                     </div>
                     <a href="https://pay.kiwify.com.br/tsYpJPJ" data-i18n="plan_btn_semestral"
-                        class="block w-full bg-ambar-darkest text-amber-100 font-bold py-4 rounded-2xl text-center hover:bg-ambar-darkred transition-all shadow-md text-base">
+                        class="block w-full bg-ambar-darkest text-amber-100 font-bold py-3.5 sm:py-4 rounded-2xl text-center hover:bg-ambar-darkred transition-all shadow-md text-sm sm:text-base">
                         Quero o Semestral →
                     </a>
                 </div>
             </div>
 
-            <div class="mt-12 flex justify-center items-center gap-2 text-sm text-gray-400">
-                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="mt-8 sm:mt-12 flex justify-center items-center gap-2 text-xs sm:text-sm text-gray-400 px-4 text-center">
+                <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
                     </path>
