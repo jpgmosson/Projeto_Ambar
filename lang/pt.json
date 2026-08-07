@@ -5,7 +5,7 @@
   "nav_faq": "FAQ",
   "nav_cta": "Ver Planos",
   "hero_badge": "Confiança se constrói em movimento",
-  "hero_title": "Do básico ao avançado:<br><span class=\"text-ambar-yellow italic font-serif\">seu treino de pole completo, em casa.</span>",
+  "hero_title": "Aulas do básico ao avançado:<br><span class=\"text-ambar-yellow italic font-serif\">seu treino de pole completo, em casa.</span>",
   "hero_bullets": "<li class=\"flex items-center gap-3\"><div class=\"w-6 h-6 rounded-full bg-ambar-orange/20 border border-ambar-orange/30 flex items-center justify-center flex-shrink-0\"><svg class=\"w-4 h-4 text-ambar-yellow\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3\" d=\"M5 13l4 4L19 7\"></path></svg></div><span>Aulas novas todo mês</span></li><li class=\"flex items-center gap-3\"><div class=\"w-6 h-6 rounded-full bg-ambar-orange/20 border border-ambar-orange/30 flex items-center justify-center flex-shrink-0\"><svg class=\"w-4 h-4 text-ambar-yellow\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3\" d=\"M5 13l4 4L19 7\"></path></svg></div><span>Aulas gravadas do básico ao avançado</span></li><li class=\"flex items-center gap-3\"><div class=\"w-6 h-6 rounded-full bg-ambar-orange/20 border border-ambar-orange/30 flex items-center justify-center flex-shrink-0\"><svg class=\"w-4 h-4 text-ambar-yellow\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3\" d=\"M5 13l4 4L19 7\"></path></svg></div><span>7 dias de garantia</span></li>",
   "hero_price_label": "A partir de",
   "hero_price_val": "12x R$ 72,29",
