@@ -98,6 +98,48 @@ document.addEventListener('click', (e) => {
     }
 });
 
+let isProgrammaticModalitiesScroll = false;
+let modalitiesScrollTimeout = null;
+
+function collapseAllModalitiesCards() {
+    const allCards = document.querySelectorAll('.carousel-card');
+    allCards.forEach(card => {
+        card.classList.remove('is-expanded');
+        card.classList.remove('w-[85vw]', 'md:w-[850px]', 'h-[650px]', 'md:h-[550px]');
+        card.classList.add('w-[280px]', 'md:w-[320px]', 'h-[400px]');
+
+        const imgContainer = card.querySelector('.image-container');
+        if (imgContainer) {
+            imgContainer.classList.remove('w-[85vw]', 'md:w-[500px]', 'h-[350px]', 'md:h-[550px]');
+            imgContainer.classList.add('w-[280px]', 'md:w-[320px]', 'h-[400px]', 'md:h-[400px]');
+        }
+
+        const imgMain = card.querySelector('.img-main');
+        if (imgMain) imgMain.style.objectFit = 'cover';
+
+        const imgBlur = card.querySelector('.img-blur');
+        if (imgBlur) {
+            imgBlur.classList.remove('opacity-60');
+            imgBlur.classList.add('opacity-0');
+        }
+
+        const overlay = card.querySelector('.gradient-overlay');
+        if (overlay) overlay.style.opacity = '1';
+
+        const title = card.querySelector('.card-title');
+        if (title) {
+            title.style.opacity = '1';
+            title.style.transform = 'translateY(0)';
+        }
+
+        const content = card.querySelector('.card-content');
+        if (content) {
+            content.classList.remove('opacity-100');
+            content.classList.add('hidden', 'md:flex');
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     loadTranslations('pt');
     selectPlan('anual');
@@ -119,6 +161,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let isScrolling = false;
         track.addEventListener('scroll', () => {
+            if (window.innerWidth < 768 && !isProgrammaticModalitiesScroll && document.querySelector('.carousel-card.is-expanded')) {
+                collapseAllModalitiesCards();
+            }
+
             if (!isScrolling) {
                 window.requestAnimationFrame(() => {
                     const maxScrollLeft = track.scrollWidth - track.clientWidth;
@@ -166,44 +212,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function toggleCard(clickedCard) {
-    const allCards = document.querySelectorAll('.carousel-card');
     const isAlreadyExpanded = clickedCard.classList.contains('is-expanded');
 
-    allCards.forEach(card => {
-        card.classList.remove('is-expanded');
-        card.classList.remove('w-[85vw]', 'md:w-[850px]', 'h-[650px]', 'md:h-[550px]');
-        card.classList.add('w-[280px]', 'md:w-[320px]', 'h-[400px]');
-
-        const imgContainer = card.querySelector('.image-container');
-        if (imgContainer) {
-            imgContainer.classList.remove('w-[85vw]', 'md:w-[500px]', 'h-[350px]', 'md:h-[550px]');
-            imgContainer.classList.add('w-[280px]', 'md:w-[320px]', 'h-[400px]', 'md:h-[400px]');
-        }
-
-        const imgMain = card.querySelector('.img-main');
-        if (imgMain) imgMain.style.objectFit = 'cover';
-
-        const imgBlur = card.querySelector('.img-blur');
-        if (imgBlur) {
-            imgBlur.classList.remove('opacity-60');
-            imgBlur.classList.add('opacity-0');
-        }
-
-        const overlay = card.querySelector('.gradient-overlay');
-        if (overlay) overlay.style.opacity = '1';
-
-        const title = card.querySelector('.card-title');
-        if (title) {
-            title.style.opacity = '1';
-            title.style.transform = 'translateY(0)';
-        }
-
-        const content = card.querySelector('.card-content');
-        if (content) {
-            content.classList.remove('opacity-100');
-            content.classList.add('hidden', 'md:flex');
-        }
-    });
+    collapseAllModalitiesCards();
 
     if (!isAlreadyExpanded) {
         clickedCard.classList.add('is-expanded');
@@ -244,9 +255,16 @@ function toggleCard(clickedCard) {
             if (content) content.classList.add('opacity-100');
         }, 200);
 
+        isProgrammaticModalitiesScroll = true;
+        if (modalitiesScrollTimeout) clearTimeout(modalitiesScrollTimeout);
+
         setTimeout(() => {
             clickedCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         }, 300);
+
+        modalitiesScrollTimeout = setTimeout(() => {
+            isProgrammaticModalitiesScroll = false;
+        }, 800);
     }
 }
 
