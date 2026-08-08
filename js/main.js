@@ -156,6 +156,26 @@ document.addEventListener('DOMContentLoaded', () => {
             track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         });
 
+        let touchStartX = 0;
+        let hasCollapsedOnTouch = false;
+
+        track.addEventListener('touchstart', (e) => {
+            if (e.touches && e.touches.length) {
+                touchStartX = e.touches[0].clientX;
+                hasCollapsedOnTouch = false;
+            }
+        }, { passive: true });
+
+        track.addEventListener('touchmove', (e) => {
+            if (!hasCollapsedOnTouch && e.touches && e.touches.length && document.querySelector('.carousel-card.is-expanded')) {
+                const currentX = e.touches[0].clientX;
+                if (Math.abs(currentX - touchStartX) > 15) {
+                    collapseAllModalitiesCards();
+                    hasCollapsedOnTouch = true;
+                }
+            }
+        }, { passive: true });
+
         let isScrolling = false;
         track.addEventListener('scroll', () => {
             if (!isScrolling) {
