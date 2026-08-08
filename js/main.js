@@ -100,6 +100,7 @@ document.addEventListener('click', (e) => {
 
 let isProgrammaticModalitiesScroll = false;
 let modalitiesScrollTimeout = null;
+let modalitiesExpandedScrollLeft = 0;
 
 function collapseAllModalitiesCards() {
     const allCards = document.querySelectorAll('.carousel-card');
@@ -162,7 +163,10 @@ document.addEventListener('DOMContentLoaded', () => {
         let isScrolling = false;
         track.addEventListener('scroll', () => {
             if (window.innerWidth < 768 && !isProgrammaticModalitiesScroll && document.querySelector('.carousel-card.is-expanded')) {
-                collapseAllModalitiesCards();
+                const delta = Math.abs(track.scrollLeft - modalitiesExpandedScrollLeft);
+                if (delta > 60) {
+                    collapseAllModalitiesCards();
+                }
             }
 
             if (!isScrolling) {
@@ -264,6 +268,10 @@ function toggleCard(clickedCard) {
 
         modalitiesScrollTimeout = setTimeout(() => {
             isProgrammaticModalitiesScroll = false;
+            const carouselTrack = document.getElementById('carousel-track');
+            if (carouselTrack) {
+                modalitiesExpandedScrollLeft = carouselTrack.scrollLeft;
+            }
         }, 800);
     }
 }
