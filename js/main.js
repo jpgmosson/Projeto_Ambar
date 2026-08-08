@@ -98,10 +98,6 @@ document.addEventListener('click', (e) => {
     }
 });
 
-let isProgrammaticModalitiesScroll = false;
-let modalitiesScrollTimeout = null;
-let modalitiesExpandedScrollLeft = 0;
-
 function collapseAllModalitiesCards() {
     const allCards = document.querySelectorAll('.carousel-card');
     allCards.forEach(card => {
@@ -162,13 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let isScrolling = false;
         track.addEventListener('scroll', () => {
-            if (window.innerWidth < 768 && !isProgrammaticModalitiesScroll && document.querySelector('.carousel-card.is-expanded')) {
-                const delta = Math.abs(track.scrollLeft - modalitiesExpandedScrollLeft);
-                if (delta > 60) {
-                    collapseAllModalitiesCards();
-                }
-            }
-
             if (!isScrolling) {
                 window.requestAnimationFrame(() => {
                     const maxScrollLeft = track.scrollWidth - track.clientWidth;
@@ -259,20 +248,9 @@ function toggleCard(clickedCard) {
             if (content) content.classList.add('opacity-100');
         }, 200);
 
-        isProgrammaticModalitiesScroll = true;
-        if (modalitiesScrollTimeout) clearTimeout(modalitiesScrollTimeout);
-
         setTimeout(() => {
             clickedCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         }, 300);
-
-        modalitiesScrollTimeout = setTimeout(() => {
-            isProgrammaticModalitiesScroll = false;
-            const carouselTrack = document.getElementById('carousel-track');
-            if (carouselTrack) {
-                modalitiesExpandedScrollLeft = carouselTrack.scrollLeft;
-            }
-        }, 800);
     }
 }
 
