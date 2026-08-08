@@ -133,6 +133,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Section 2 Mobile Carousel Indicator Dots
+    const sec2Carousel = document.getElementById('sec2-carousel');
+    const sec2Dots = document.querySelectorAll('#sec2-dots span');
+    if (sec2Carousel && sec2Dots.length) {
+        let isSec2Scrolling = false;
+        sec2Carousel.addEventListener('scroll', () => {
+            if (!isSec2Scrolling) {
+                window.requestAnimationFrame(() => {
+                    const scrollPos = sec2Carousel.scrollLeft;
+                    const cardWidth = sec2Carousel.firstElementChild.offsetWidth + 24; // width + gap
+                    const activeIndex = Math.min(
+                        sec2Dots.length - 1,
+                        Math.round(scrollPos / cardWidth)
+                    );
+                    sec2Dots.forEach((dot, idx) => {
+                        if (idx === activeIndex) {
+                            dot.classList.remove('bg-ambar-darkest/20', 'w-2.5');
+                            dot.classList.add('bg-ambar-red', 'w-6');
+                        } else {
+                            dot.classList.remove('bg-ambar-red', 'w-6');
+                            dot.classList.add('bg-ambar-darkest/20', 'w-2.5');
+                        }
+                    });
+                    isSec2Scrolling = false;
+                });
+                isSec2Scrolling = true;
+            }
+        }, { passive: true });
+    }
 });
 
 function toggleCard(clickedCard) {
